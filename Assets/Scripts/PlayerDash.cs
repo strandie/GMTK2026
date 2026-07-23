@@ -2,22 +2,46 @@ using UnityEngine;
 
 public class PlayerDash : MonoBehaviour
 {
+    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private float skinWidth = 0.05f;
+
+    private CapsuleCollider2D playerCollider;
+
+    private Rigidbody2D rb;
 
     public float dashDistance = 5f;
     public float dashSpeed = 20f;
 
-    private Rigidbody2D rb;
     private Vector2 dashTarget;
     private bool isDashing;
 
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        playerCollider = GetComponent<CapsuleCollider2D>();
     }
 
-    // Update is called once per frame
+    private float GetDashDistance(Vector2 direction, float distance)
+    {
+        RaycastHit2D hit = Physics2D.CapsuleCast(
+            rb.position,
+            playerCollider.size,
+            playerCollider.direction,
+            0f,
+            direction,
+            distance,
+            groundLayer
+        );
+
+        if (hit.collider != null)
+        {
+            // Stop slightly before the wall
+            return Mathf.Max(hit.distance - skinWidth, 0f);
+        }
+
+        return distance;
+    }
+
     void Update()
     {
         if (Input.GetMouseButtonDown(1) && !isDashing)
@@ -31,7 +55,12 @@ public class PlayerDash : MonoBehaviour
             // Limit dash distance
             distance = Mathf.Min(distance, dashDistance);
 
+            // Check for walls before setting target
+            distance = GetDashDistance(direction, distance);
+
             dashTarget = rb.position + direction * distance;
+
+            rb.linearVelocity = Vector2.zero;
 
             isDashing = true;
         }
