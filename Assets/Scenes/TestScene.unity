@@ -966,6 +966,7 @@ GameObject:
   - component: {fileID: 583026032}
   - component: {fileID: 583026035}
   - component: {fileID: 583026036}
+  - component: {fileID: 583026037}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1112,6 +1113,20 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 1}
   m_Direction: 0
+--- !u!114 &583026037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583026031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b77d16b90bb2e714eb8b9bf60e60ed45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  dashDistance: 5
+  dashSpeed: 20
 --- !u!1 &863022531
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,7 +1142,7 @@ GameObject:
   - component: {fileID: 863022532}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
