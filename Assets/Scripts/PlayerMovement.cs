@@ -247,6 +247,11 @@ public class PlayerMovement : MonoBehaviour
 
 
     }
+    public int whichWallSliding()
+    {
+        if(!isWallSliding) return 0;
+        return wallSide;
+    }
 
     private void ApplyBetterGravity()
     {
