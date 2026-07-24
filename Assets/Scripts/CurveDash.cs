@@ -5,91 +5,108 @@ public class CurveDash : MonoBehaviour
 {
     private Rigidbody2D rb;
 
-    private List<Vector2> pathPoints =
+    private List<Vector2> rawPath =
         new List<Vector2>();
 
-    [Header("Path")]
+    private List<Vector2> dashPath =
+        new List<Vector2>();
+
+
+    [Header("Drawing")]
     public float maxInk = 8f;
+    public float maxDrawDistance = 5f;
+    public float minimumPointDistance = 0.15f;
+
 
     [Header("Dash")]
-    public float dashSpeed = 20f;
+    public float dashSpeed = 50f;
+
 
     [Header("Visual")]
     public LineRenderer line;
 
 
     private bool drawing;
-
-    private float currentLength;
-
-    private int currentPoint;
-
     private bool dashing;
 
+    private int currentPoint;
 
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
 
-        if (line != null)
+        if (line)
             line.positionCount = 0;
+    }
+
+
+
+    private Vector2 MouseWorld()
+    {
+        return Camera.main.ScreenToWorldPoint(
+            Input.mousePosition
+        );
     }
 
 
 
     private void Update()
     {
-        Vector2 mouse =
-            Camera.main.ScreenToWorldPoint(
-                Input.mousePosition
-            );
+        Vector2 mouse = MouseWorld();
 
 
-        // Start drawing
+
         if (Input.GetMouseButtonDown(1))
         {
-            pathPoints.Clear();
+            rawPath.Clear();
 
-            currentLength = 0;
+            dashPath.Clear();
 
-            currentPoint = 0;
 
             drawing = true;
+
 
             AddPoint(rb.position);
         }
 
 
 
-        // Drawing
         if (drawing && Input.GetMouseButton(1))
         {
-            AddPoint(mouse);
+            Vector2 point =
+                ClampFromPlayer(mouse);
+
+
+            AddPoint(point);
 
             UpdateLine();
         }
 
 
 
-        // Release
         if (drawing && Input.GetMouseButtonUp(1))
         {
             drawing = false;
 
-            StartDash();
+            PreparePath();
+
+            dashing = true;
+
+            currentPoint = 0;
         }
 
 
 
-        // Cancel
         if (Input.GetMouseButtonDown(0))
         {
             drawing = false;
-
             dashing = false;
 
-            pathPoints.Clear();
+            rawPath.Clear();
+            dashPath.Clear();
+
+            rb.linearVelocity = Vector2.zero;
 
             if (line)
                 line.positionCount = 0;
@@ -98,27 +115,80 @@ public class CurveDash : MonoBehaviour
 
 
 
-    private void AddPoint(Vector2 point)
+
+
+    private Vector2 ClampFromPlayer(Vector2 point)
     {
-        if (pathPoints.Count > 0)
+        Vector2 offset =
+            point - rb.position;
+
+
+        if (offset.magnitude > maxDrawDistance)
         {
-            float distance =
-                Vector2.Distance(
-                    pathPoints[^1],
-                    point
-                );
-
-
-            if (currentLength + distance > maxInk)
-                return;
-
-
-            currentLength += distance;
+            offset =
+                offset.normalized *
+                maxDrawDistance;
         }
 
 
-        pathPoints.Add(point);
+        return rb.position + offset;
     }
+
+
+
+
+
+
+    private void AddPoint(Vector2 point)
+    {
+        if (rawPath.Count > 0)
+        {
+            if (Vector2.Distance(
+                rawPath[^1],
+                point)
+                < minimumPointDistance)
+                return;
+        }
+
+
+        rawPath.Add(point);
+    }
+
+
+
+
+
+
+    private void PreparePath()
+    {
+        dashPath.Clear();
+
+
+        float length = 0;
+
+
+        for (int i = 1; i < rawPath.Count; i++)
+        {
+            float dist =
+                Vector2.Distance(
+                    rawPath[i - 1],
+                    rawPath[i]
+                );
+
+
+            if (length + dist > maxInk)
+                break;
+
+
+            length += dist;
+
+
+            dashPath.Add(rawPath[i]);
+        }
+    }
+
+
+
 
 
 
@@ -129,30 +199,20 @@ public class CurveDash : MonoBehaviour
 
 
         line.positionCount =
-            pathPoints.Count;
+            rawPath.Count;
 
 
-        for (int i = 0; i < pathPoints.Count; i++)
+        for (int i = 0; i < rawPath.Count; i++)
         {
             line.SetPosition(
                 i,
-                pathPoints[i]
+                rawPath[i]
             );
         }
     }
 
 
 
-    private void StartDash()
-    {
-        if (pathPoints.Count < 2)
-            return;
-
-
-        currentPoint = 1;
-
-        dashing = true;
-    }
 
 
 
@@ -162,38 +222,51 @@ public class CurveDash : MonoBehaviour
             return;
 
 
-        if (currentPoint >= pathPoints.Count)
+        if (currentPoint >= dashPath.Count)
         {
-            dashing = false;
-
-            line.positionCount = 0;
-
+            EndDash();
             return;
         }
 
 
-
         Vector2 target =
-            pathPoints[currentPoint];
+            dashPath[currentPoint];
 
 
-        rb.MovePosition(
-            Vector2.MoveTowards(
-                rb.position,
-                target,
-                dashSpeed *
-                Time.fixedDeltaTime
-            )
-        );
+        Vector2 dir =
+            (target - rb.position)
+            .normalized;
+
+
+
+        rb.linearVelocity =
+            dir * dashSpeed;
 
 
 
         if (Vector2.Distance(
             rb.position,
-            target
-        ) < 0.05f)
+            target)
+            < 0.1f)
         {
             currentPoint++;
         }
+    }
+
+
+
+
+
+
+    private void EndDash()
+    {
+        dashing = false;
+
+        rb.linearVelocity =
+            Vector2.zero;
+
+
+        if (line)
+            line.positionCount = 0;
     }
 }
