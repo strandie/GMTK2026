@@ -150,10 +150,10 @@ public class FlickDash : MonoBehaviour
                     flickDirection * speed;
 
 
-                Debug.Log(
+                /*Debug.Log(
                     "Dash Velocity: "
                     + dashVelocity
-                );
+                );*/
 
 
                 rb.linearVelocity =

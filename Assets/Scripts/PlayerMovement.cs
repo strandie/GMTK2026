@@ -25,11 +25,24 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float shortJumpGravity = 7f;
     [SerializeField] private float maxFallSpeed = 22f;
 
-    [Header("Wall Movement")]
-    [SerializeField] private float wallSlideSpeed = 4f;
+    [Header("Wall Jump")]
+    
     [SerializeField] private float wallJumpHorizontalVelocity = 11f;
     [SerializeField] private float wallJumpVerticalVelocity = 14f;
     [SerializeField] private float wallJumpControlLockTime = 0.12f;
+
+    [Header("Wall Slide - Momentum")]
+    [SerializeField] private float wallSlideSpeed = 10f;
+    [SerializeField] private float wallSlideDurationToMaxGravity = 2f;
+    [SerializeField] private float wallSlideCatchSpeed = 6f;        // velocity you decelerate down to on fast-fall entry
+    [SerializeField] private float wallSlideCatchDeceleration = 45f; // how hard you brake to reach catch speed
+    [SerializeField] private float wallSlideUpwardCancelRate = 60f;  // how fast upward momentum gets killed
+    [SerializeField] private float wallSlideFastFallThreshold = 10f; // |velocity.y| above this = "fast" entry
+
+    private bool isWallSliding = false;
+    private bool wasWallSliding = false;
+    private bool cameFromFastFall;
+    private float wallSlideDuration = 0f;
 
     [Header("Dash Reference")]
     [SerializeField] private FlickDash flickDash;
@@ -190,19 +203,59 @@ public class PlayerMovement : MonoBehaviour
 
     private void ApplyWallSlide()
     {
-        if (grounded || wallSide == 0 || rb.linearVelocity.y >= 0f)
+        bool pressingIntoWall = (wallSide == 1 && moveInput.x > 0f) || (wallSide == -1 && moveInput.x < 0f);
+        isWallSliding = !grounded && pressingIntoWall; 
+
+        if (!isWallSliding)
         {
+            wasWallSliding = false;
+            wallSlideDuration = 0f;
             return;
         }
 
-        rb.linearVelocity = new Vector2(
-            rb.linearVelocity.x,
-            Mathf.Max(rb.linearVelocity.y, -wallSlideSpeed)
-        );
+        bool justEntered = !wasWallSliding;
+        wasWallSliding = true;
+        wallSlideDuration += Time.deltaTime;
+
+        float currentTargetSlideSpeed = -Mathf.Lerp(0f, wallSlideSpeed, wallSlideDuration / wallSlideDurationToMaxGravity); // your duration-based ramp, as a negative (downward) value
+
+        if (justEntered)
+        {
+            cameFromFastFall = rb.linearVelocity.y < -wallSlideFastFallThreshold;
+        }
+
+        if (rb.linearVelocity.y > 0f)
+        {
+            // entered while still moving upward — aggressively cancel it
+            float y = Mathf.MoveTowards(rb.linearVelocity.y, 0f, wallSlideUpwardCancelRate * Time.fixedDeltaTime);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, y);
+            return;
+        }
+
+        if (cameFromFastFall && rb.linearVelocity.y < -wallSlideCatchSpeed)
+        {
+            // decelerating toward the "catch" speed, not the final ramped speed
+            float y = Mathf.MoveTowards(rb.linearVelocity.y, -wallSlideCatchSpeed, wallSlideCatchDeceleration * Time.fixedDeltaTime);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, y);
+            return;
+        }
+
+        // caught (or was never fast-falling) — hand off to your normal ramped slide behavior
+        cameFromFastFall = false;
+        float slideY = Mathf.MoveTowards(rb.linearVelocity.y, currentTargetSlideSpeed, /* your ramp accel */ 20f * Time.fixedDeltaTime);
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, slideY);
+
+
     }
 
     private void ApplyBetterGravity()
     {
+        if(isWallSliding)
+        {
+            rb.gravityScale = 0f;
+            return;
+        }
+
         if (rb.linearVelocity.y < -0.01f)
         {
             rb.gravityScale = fallGravity;
