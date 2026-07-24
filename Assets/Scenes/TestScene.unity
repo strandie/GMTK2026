@@ -971,7 +971,6 @@ GameObject:
   - component: {fileID: 583026039}
   - component: {fileID: 583026040}
   - component: {fileID: 583026041}
-  - component: {fileID: 583026042}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1141,6 +1140,7 @@ MonoBehaviour:
   jumpBufferTime: 0.1
   moveSpeed: 5
   jumpForce: 8
+  flickDash: {fileID: 583026041}
 --- !u!114 &583026038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1241,30 +1241,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 583026031}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fcb88fd8f1b22c94fbae9f8067f9a6de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlickDash
-  multiplier: 0.01
-  maxDistance: 10
-  dashSpeed: 20
+  dashDuration: 0.25
+  velocityMultiplier: 0.5
+  maxVelocity: 25
+  maxFlickDistance: 150
+  minimumFlickDistance: 0.2
   visualizer: {fileID: 644726405}
---- !u!114 &583026042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 583026031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4876aca579d41114fbf37dd3d002ae26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CurveDash
-  maxInk: 8
-  dashSpeed: 20
-  line: {fileID: 644726406}
 --- !u!1 &644726403
 GameObject:
   m_ObjectHideFlags: 0
