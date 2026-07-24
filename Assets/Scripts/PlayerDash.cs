@@ -81,6 +81,7 @@ public class PlayerDash : MonoBehaviour
             if (Vector2.Distance(rb.position, dashTarget) < 0.01f)
             {
                 rb.position = dashTarget;
+                rb.linearVelocity = Vector2.zero;
                 isDashing = false;
             }
         }

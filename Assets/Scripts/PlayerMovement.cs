@@ -7,8 +7,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float groundCheckDistance = 0.1f;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float coyoteTime = 0.15f;
+    [SerializeField] private float jumpBufferTime = 0.1f;
 
     private float coyoteTimer;
+    private float jumpBufferTimer;
 
     public float moveSpeed = 8f;
     public float jumpForce = 12f;
@@ -57,6 +59,11 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext context)
     {
+        if (context.performed)
+        {
+            jumpBufferTimer = jumpBufferTime;
+        }
+
         if (context.performed && coyoteTimer > 0)
         {
             rb.linearVelocity = new Vector2(
@@ -81,10 +88,30 @@ public class PlayerMovement : MonoBehaviour
             coyoteTimer -= Time.fixedDeltaTime;
         }
 
+
+        if (jumpBufferTimer > 0)
+        {
+            jumpBufferTimer -= Time.fixedDeltaTime;
+        }
+
+
+        if (coyoteTimer > 0 && jumpBufferTimer > 0)
+        {
+            rb.linearVelocity = new Vector2(
+                rb.linearVelocity.x,
+                jumpForce
+            );
+
+            coyoteTimer = 0;
+            jumpBufferTimer = 0;
+        }
+
+
         rb.linearVelocity = new Vector2(
             moveInput.x * moveSpeed,
             rb.linearVelocity.y
         );
+
 
         if (moveInput.x > 0.1f)
             sr.flipX = false;
