@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 94473526}
   - component: {fileID: 94473525}
   m_Layer: 0
-  m_Name: Left Wall Particles (1)
+  m_Name: Left Wall Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -249,7 +249,7 @@ ParticleSystem:
   emitterVelocityMode: 0
   looping: 1
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -305,7 +305,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -315,7 +315,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -1069,7 +1069,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 8
+      scalar: 15
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -7804,7 +7804,7 @@ ParticleSystem:
   emitterVelocityMode: 0
   looping: 1
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -7860,7 +7860,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -7870,7 +7870,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -8624,7 +8624,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 8
+      scalar: 15
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -12537,6 +12537,7 @@ GameObject:
   - component: {fileID: 583026038}
   - component: {fileID: 583026039}
   - component: {fileID: 583026041}
+  - component: {fileID: 583026042}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -12816,6 +12817,20 @@ MonoBehaviour:
   maxFlickDistance: 150
   minimumFlickDistance: 0.2
   visualizer: {fileID: 644726405}
+--- !u!114 &583026042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583026031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33371da982c95cb4abfb41f6202b5148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerWallSlideFX
+  leftParticleSystem: {fileID: 94473526}
+  rightParticleSystem: {fileID: 515098919}
 --- !u!1 &644726403
 GameObject:
   m_ObjectHideFlags: 0
