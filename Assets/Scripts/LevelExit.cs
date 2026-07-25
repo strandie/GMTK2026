@@ -10,15 +10,10 @@ public class LevelExit : MonoBehaviour
     public Transform portalCenter;
     public float walkSpeed = 2f;
 
-    private bool activated = false;
-
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (activated) return;
-
         if (other.CompareTag("Player"))
         {
-            activated = true;
             StartCoroutine(EnterPortal(other.gameObject));
         }
     }
@@ -31,7 +26,7 @@ public class LevelExit : MonoBehaviour
             movement.enabled = false;
 
         // Player walks to center of door
-        while (Vector3.Distance(player.transform.position, portalCenter.position) > 0.1f)
+        /*while (Vector2.Distance(player.transform.position, portalCenter.position) > 0.1f)
         {
             player.transform.position = Vector3.MoveTowards(
                 player.transform.position,
@@ -39,7 +34,7 @@ public class LevelExit : MonoBehaviour
                 walkSpeed * Time.deltaTime);
 
             yield return null;
-        }
+        }*/
 
         // Wait until player enters door
         yield return new WaitForSeconds(enterTime);
