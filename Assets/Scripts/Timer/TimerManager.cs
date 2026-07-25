@@ -4,6 +4,7 @@ using TMPro;
 public class TimerManager : MonoBehaviour
 {
     public static TimerManager Instance {get; private set;}
+    [SerializeField] private TimerTextSpawner timerTextSpawner;
 
     private void Awake()
     {
@@ -41,9 +42,11 @@ public class TimerManager : MonoBehaviour
     public void AddToTimer(float val)
     {
         timer += val;
+        timerTextSpawner.SpawnTextNumber(val);
     }
     public void SubtractFromTimer(float val)
     {
         timer -= val;
+        timerTextSpawner.SpawnTextNumber(-val);
     }
 }
