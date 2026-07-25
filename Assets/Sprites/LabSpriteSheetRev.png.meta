@@ -1,0 +1,3007 @@
+fileFormatVersion: 2
+guid: 03246ea92253ee84aab603a7e9955861
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_0
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 209
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e48503376981d54e94a8c46f7c1b9ec
+      internalID: 1061930009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_1
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 209
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03cf6ea9d2484d14fa5b3a118d2db6d2
+      internalID: 865909062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_2
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 209
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75062cb27d06e146ae89a2431dde12c
+      internalID: -1013108080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_3
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 209
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c499a0daf62ebf64194b16bff143c1f3
+      internalID: -20424111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_4
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 209
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df1a688bb757a7f45a75067f9e1c8792
+      internalID: 1131460346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_5
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 209
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3edcb9b38b9a2bf408bf7074c755d402
+      internalID: 168507883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_6
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 209
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 714ae68d217cab545a33281c195a5a24
+      internalID: -186295855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_7
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 209
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79180d09700ce7c44bb25a537b424e24
+      internalID: -1505164705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_8
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 209
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbcff22b5f134e847b67d5ba9c7e7c93
+      internalID: -106610397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_9
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 209
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70cf15b2485ef344794110adc9c3fc2d
+      internalID: -564729496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_10
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 209
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a1d9dcee5186d34a9a9c0013b6eca55
+      internalID: -2099561766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_11
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 209
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00a25006859a4f749bb1cbba33ab38c6
+      internalID: 1081507198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_12
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 209
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 391463650bd25c44583d6f0b105b4656
+      internalID: 1532505095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_13
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 201
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22400caf3627b8f4e9570906c5bfe7d3
+      internalID: 1578725251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_14
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 201
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68828a529caf6ab48be29084c374fe79
+      internalID: -1691634245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_15
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 201
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8da18ed1d3827464c80db4ec6abe0e24
+      internalID: 1692148367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_16
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 201
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2a49b857eed64c43bc027ec5df66d59
+      internalID: 1789480180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_17
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 201
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3893e37de844e544db139dec37591b0b
+      internalID: -2137180421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_18
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 201
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1f68feede1c0ff4299fbba226d00685
+      internalID: 1298835964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_19
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 201
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7cf7c2b26735f24780aefdeeb0b49a5
+      internalID: -1278069611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_20
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 201
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 235ec3871f7f62140b66bb703c105c80
+      internalID: 1452390784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_21
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 201
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae5fc8c232f6ce54d9f821406f518ead
+      internalID: 1344051046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_22
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 201
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce94fe2f083d850458c797835ad49f10
+      internalID: -305198832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_23
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 201
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c32e8dfc20752345ae1d2b27e472fce
+      internalID: 1773100766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_24
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 201
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c969e85ac7564b4d95d33f6815aeccc
+      internalID: -1759172403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_25
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 201
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 149c624641f431641a76e6f2cb78b841
+      internalID: -1338545304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_26
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 193
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 579e364aa3a50d9499954f61f19b7895
+      internalID: 806796737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_27
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 193
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fc74cec769c05d4d9520d356de3eca2
+      internalID: 1586707825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_28
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 193
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 048135e27e316af4390fc860f738907f
+      internalID: 1653895223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_29
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 193
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96be7db8a9394dc49a710dd7e22a58eb
+      internalID: 2110212620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_30
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 193
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 487a550d7959fbf48b1812d1cf7384a4
+      internalID: 967397263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_31
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 193
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cf3cf3053f1233459295b965c89266a
+      internalID: -1834014174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_32
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 193
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bb5c63b5cd8b3243a6c74973e5455ca
+      internalID: 2122469647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_33
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 193
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75de000db786df14b9b828e1c220bf12
+      internalID: -1978559005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_34
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 193
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30730eb9640b70a419a825a06c68992a
+      internalID: 298207114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_35
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 193
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffa8507f7d5eefd4b81ad4497dd4c7ee
+      internalID: -895690492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_36
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 193
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36bf7ff36cb661840a6c948ae929137b
+      internalID: 875614359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_37
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 193
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0206588a87a5d241aeb4e6660d849b5
+      internalID: -1183874302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_38
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 193
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e033ab141b0b446b43390221d202f3
+      internalID: 1665350537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_39
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 185
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d48274eefac6694b909d5adf911f6e6
+      internalID: -255660982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_40
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 185
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a8b018d15e382d4790414ed7b1c2dcc
+      internalID: -824033012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_41
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 185
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdee513cc31cf7948a66153001c80c32
+      internalID: -1979061473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_42
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 185
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf23a9935d5a105499ddc550caff3277
+      internalID: 135668755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_43
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 185
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a25752988abf6164dbea6756c9da0c8b
+      internalID: -805985105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_44
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 185
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ec35d29a489f464ca25fc7d5c85c528
+      internalID: -600113596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_45
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 185
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 926b0ab2692dd054ab5008cfbb28479d
+      internalID: 1088332866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_46
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 185
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 256358a548b1afa47b89273aa4af6881
+      internalID: 1431365415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_47
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 185
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba14374d90287f64eb38724cd617f919
+      internalID: -1902533507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_48
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 185
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 400f602d2a4bf0d4b829574be0a881ea
+      internalID: 809400991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_49
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 185
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79a72002aed87664eb9398ddfec74508
+      internalID: -1653798600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_50
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 185
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b2bd278399776347941a8a8ef173821
+      internalID: -360378057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_51
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 185
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab12e7ff6f933184197363491c3b582a
+      internalID: 828450720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_52
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 177
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dd53a38195eb4f4f9f4863dedda2343
+      internalID: 1035560589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_53
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 177
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d5ad02d3642e214db3c8da18475e300
+      internalID: 1648777987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_54
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 177
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c11e9cdfb507ea241be1804dfb41cccc
+      internalID: -689848819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_55
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 177
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2061a08f57c88c845976535a8bde7b53
+      internalID: 239823238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_56
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 177
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ef9915b6309d2b43bf8a2beeb1a92fc
+      internalID: 582427191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_57
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 177
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff0d4314f3e85941a57889112e56668
+      internalID: -245731189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_58
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 177
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37f52764b5d5b9048a46069046131ef6
+      internalID: -1884858432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_59
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 177
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83c0df902106f6145a85d59e40d3477e
+      internalID: -1052993473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_60
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 177
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 705a3ce1ba895ea4d818c2bc0090820b
+      internalID: -547055975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_61
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 177
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e7f63656783dfe4580f5ac9a7e3d164
+      internalID: 41764799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_62
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 177
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca0efad382f9ef4498463b93256b374b
+      internalID: -692737925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_63
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 177
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 125e7522a4e52db4190c9dccd364edd5
+      internalID: 23095327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_64
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 177
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f85cc25f80712bc489af40c3bffc09b0
+      internalID: -450275312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_65
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 177
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d08b54f556c719d4aba125fc329236fd
+      internalID: 2074793997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_66
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 177
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c0fc201348ccd4384b595b42e007e7
+      internalID: -1287750452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_67
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 169
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 570ca45180ca1da468325f93ba74a796
+      internalID: -975766804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_68
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 169
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e81ae3b082c39e745b7883ccc32ab1a1
+      internalID: -446536405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_69
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 169
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65269f233317f0543b4e92429b59a2d7
+      internalID: 1697811147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_70
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 169
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62266a40f5e69c24d98204c55bb021bc
+      internalID: 768572629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_71
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 169
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca699d65f96734749a058dc39d9233bb
+      internalID: 576292047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_72
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 169
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8036d4a2f3e4e74494532c5df4f07ce
+      internalID: 1479890461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_73
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 169
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 639873c39bdb1f34f8791ae3e428c652
+      internalID: -524485622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_74
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 169
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bfb46cbd7d3759418ad3f16f89c9cb8
+      internalID: 1220079368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_75
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 169
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c64b308342a1de44a3534db5afb98d0
+      internalID: 2123999567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_76
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 169
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f2ca852f30bf4541acb50c9e7a5a0aa
+      internalID: -1920326891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_77
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 169
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c06d9ae9788f254082998796b901c73
+      internalID: -431521713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_78
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 169
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec3250d6d5d265438fbbbd395e6b835
+      internalID: 222917566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_79
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 169
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3d22f2bbe359064bb0ef43f44687329
+      internalID: 1271207289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_80
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 169
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 156a9281a93517e4e8b48a3df01e613f
+      internalID: 23525854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_81
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 169
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78ccaad37a84b0d48b23c3e2a990983e
+      internalID: 1668173182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_82
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 161
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3fcf88ac32649a4492c08beb63ed4ea
+      internalID: -2123092737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_83
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 161
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22c62654192601b4c8b2684708f3f66a
+      internalID: -1178079545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_84
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 161
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de53862d20a616d4996704eb36cadde3
+      internalID: -1179260547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_85
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 161
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b844e10e9865114cbd97a56d34bd19e
+      internalID: 1724090399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_86
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 161
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 268297d893b94fb4aac26352f572efba
+      internalID: -1076882250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_87
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 161
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0242e66caf9644489967381205b7433
+      internalID: -28919094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_88
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 161
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 837a985586b9f8244ac5e95cc2397c73
+      internalID: 1198697320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_89
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 161
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 256b54787b4d2b846bdf75d8e116adfe
+      internalID: 153883421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_90
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 161
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dd2aa0bf73417544b1f5b60aa8b3ae6
+      internalID: 1664794121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_91
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 161
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb15f51a3b9af884383acc72012d3399
+      internalID: 411723843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_92
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 161
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45ffae2ac3574684faac1936a6da0554
+      internalID: 661579425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_93
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 161
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2490e16e34a4244db90f32007d1ac43
+      internalID: -1448272501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_94
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 161
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 282323b8c17e1d048bca177f4df0146e
+      internalID: -1205074390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_95
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 161
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8842f6ec03299f41b6a9a1222adfcf6
+      internalID: -990388292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_96
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 161
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e320b0659d0cb9a44b13a46253e9fd3c
+      internalID: -441053522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_97
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 153
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0af8e4144bae274a9875211c652c248
+      internalID: -186954776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_98
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 153
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c0a2c5f2502a26479d12cc8ef291204
+      internalID: 1441130765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_99
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 153
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2719697cd8477aa49a0cae9608becc22
+      internalID: 1612521610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_100
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 153
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eef16e513ae408940bea1e3e5fd812f6
+      internalID: 1624762488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_101
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 153
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c4c6634d905cf64293842a95d898da1
+      internalID: 288241870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_102
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 153
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96942857c82bb0442b5fea32d74bd53e
+      internalID: 53335478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_103
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 153
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd77fbb5cf30bdb429495d5cba95a137
+      internalID: -1792932970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_104
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 153
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f33d47d975163e448bab17ad763b39e3
+      internalID: 134013787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_105
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 153
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 554a1554570c8404a81f46373111f48e
+      internalID: 1064550741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_106
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 153
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab45e815e325a8a4d941b9d428a67d7b
+      internalID: -1799637681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_107
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 153
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27715aeee54d50743befa73d6e4db329
+      internalID: 1726113709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_108
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 153
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ac33da3871dd7b4f9cbc2b059722cfd
+      internalID: 841609421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_109
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 153
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 834366c6ba9175047acb2619e6b6b56e
+      internalID: 930045534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_110
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 153
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20bc15d1bcebda342b83de7ea55cf6b5
+      internalID: 2141413945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_111
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 153
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d00f6fb7fe5018d4598de93fa2540a5b
+      internalID: -1590252171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_112
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 145
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86ce624ae3772004e87e583decda4619
+      internalID: -695399042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_113
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 145
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e78e3d5c80e74b459650468a346d726
+      internalID: -1387441067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_114
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 145
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4425750b1e8e8e14ab66f7b24268ce5b
+      internalID: -1225502965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_115
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 145
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8402a4b30c4ac9543bbb70bc686fbac3
+      internalID: -1817279815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_116
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 145
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0acf1ff23b3c394d909d72080dca912
+      internalID: 1244330653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_117
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 145
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 741f66761d03e524c8e72aaa4c7235e8
+      internalID: -1396618574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_118
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 145
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01c553b133e04284ea6ce3cecfa2bcf1
+      internalID: 710684905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_119
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 145
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ef13ebc861c17a4a9d2d0842298dee4
+      internalID: -947325753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_120
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 145
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801d37c6e39479b42bd91ac9fc09c0fe
+      internalID: 819893555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_121
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 145
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 717926d240352e74f8ef153343d954ac
+      internalID: -251496760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_122
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 145
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3f2f6e5412639442a0e07e3fdc777f5
+      internalID: -2017796851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_123
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 145
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2376773fcefeab4dbb3bf4ace62ba7f
+      internalID: -286484408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabSpriteSheetRev_124
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 145
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f32faa1831e791f42900e25ea0d367f4
+      internalID: -345672704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4818311bc50668c4c8ae0a471ffc3cd3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":8.0,"y":8.0},"gridSpriteOffset":{"x":5.0,"y":3.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      LabSpriteSheetRev_0: 1061930009
+      LabSpriteSheetRev_1: 865909062
+      LabSpriteSheetRev_10: -2099561766
+      LabSpriteSheetRev_100: 1624762488
+      LabSpriteSheetRev_101: 288241870
+      LabSpriteSheetRev_102: 53335478
+      LabSpriteSheetRev_103: -1792932970
+      LabSpriteSheetRev_104: 134013787
+      LabSpriteSheetRev_105: 1064550741
+      LabSpriteSheetRev_106: -1799637681
+      LabSpriteSheetRev_107: 1726113709
+      LabSpriteSheetRev_108: 841609421
+      LabSpriteSheetRev_109: 930045534
+      LabSpriteSheetRev_11: 1081507198
+      LabSpriteSheetRev_110: 2141413945
+      LabSpriteSheetRev_111: -1590252171
+      LabSpriteSheetRev_112: -695399042
+      LabSpriteSheetRev_113: -1387441067
+      LabSpriteSheetRev_114: -1225502965
+      LabSpriteSheetRev_115: -1817279815
+      LabSpriteSheetRev_116: 1244330653
+      LabSpriteSheetRev_117: -1396618574
+      LabSpriteSheetRev_118: 710684905
+      LabSpriteSheetRev_119: -947325753
+      LabSpriteSheetRev_12: 1532505095
+      LabSpriteSheetRev_120: 819893555
+      LabSpriteSheetRev_121: -251496760
+      LabSpriteSheetRev_122: -2017796851
+      LabSpriteSheetRev_123: -286484408
+      LabSpriteSheetRev_124: -345672704
+      LabSpriteSheetRev_13: 1578725251
+      LabSpriteSheetRev_14: -1691634245
+      LabSpriteSheetRev_15: 1692148367
+      LabSpriteSheetRev_16: 1789480180
+      LabSpriteSheetRev_17: -2137180421
+      LabSpriteSheetRev_18: 1298835964
+      LabSpriteSheetRev_19: -1278069611
+      LabSpriteSheetRev_2: -1013108080
+      LabSpriteSheetRev_20: 1452390784
+      LabSpriteSheetRev_21: 1344051046
+      LabSpriteSheetRev_22: -305198832
+      LabSpriteSheetRev_23: 1773100766
+      LabSpriteSheetRev_24: -1759172403
+      LabSpriteSheetRev_25: -1338545304
+      LabSpriteSheetRev_26: 806796737
+      LabSpriteSheetRev_27: 1586707825
+      LabSpriteSheetRev_28: 1653895223
+      LabSpriteSheetRev_29: 2110212620
+      LabSpriteSheetRev_3: -20424111
+      LabSpriteSheetRev_30: 967397263
+      LabSpriteSheetRev_31: -1834014174
+      LabSpriteSheetRev_32: 2122469647
+      LabSpriteSheetRev_33: -1978559005
+      LabSpriteSheetRev_34: 298207114
+      LabSpriteSheetRev_35: -895690492
+      LabSpriteSheetRev_36: 875614359
+      LabSpriteSheetRev_37: -1183874302
+      LabSpriteSheetRev_38: 1665350537
+      LabSpriteSheetRev_39: -255660982
+      LabSpriteSheetRev_4: 1131460346
+      LabSpriteSheetRev_40: -824033012
+      LabSpriteSheetRev_41: -1979061473
+      LabSpriteSheetRev_42: 135668755
+      LabSpriteSheetRev_43: -805985105
+      LabSpriteSheetRev_44: -600113596
+      LabSpriteSheetRev_45: 1088332866
+      LabSpriteSheetRev_46: 1431365415
+      LabSpriteSheetRev_47: -1902533507
+      LabSpriteSheetRev_48: 809400991
+      LabSpriteSheetRev_49: -1653798600
+      LabSpriteSheetRev_5: 168507883
+      LabSpriteSheetRev_50: -360378057
+      LabSpriteSheetRev_51: 828450720
+      LabSpriteSheetRev_52: 1035560589
+      LabSpriteSheetRev_53: 1648777987
+      LabSpriteSheetRev_54: -689848819
+      LabSpriteSheetRev_55: 239823238
+      LabSpriteSheetRev_56: 582427191
+      LabSpriteSheetRev_57: -245731189
+      LabSpriteSheetRev_58: -1884858432
+      LabSpriteSheetRev_59: -1052993473
+      LabSpriteSheetRev_6: -186295855
+      LabSpriteSheetRev_60: -547055975
+      LabSpriteSheetRev_61: 41764799
+      LabSpriteSheetRev_62: -692737925
+      LabSpriteSheetRev_63: 23095327
+      LabSpriteSheetRev_64: -450275312
+      LabSpriteSheetRev_65: 2074793997
+      LabSpriteSheetRev_66: -1287750452
+      LabSpriteSheetRev_67: -975766804
+      LabSpriteSheetRev_68: -446536405
+      LabSpriteSheetRev_69: 1697811147
+      LabSpriteSheetRev_7: -1505164705
+      LabSpriteSheetRev_70: 768572629
+      LabSpriteSheetRev_71: 576292047
+      LabSpriteSheetRev_72: 1479890461
+      LabSpriteSheetRev_73: -524485622
+      LabSpriteSheetRev_74: 1220079368
+      LabSpriteSheetRev_75: 2123999567
+      LabSpriteSheetRev_76: -1920326891
+      LabSpriteSheetRev_77: -431521713
+      LabSpriteSheetRev_78: 222917566
+      LabSpriteSheetRev_79: 1271207289
+      LabSpriteSheetRev_8: -106610397
+      LabSpriteSheetRev_80: 23525854
+      LabSpriteSheetRev_81: 1668173182
+      LabSpriteSheetRev_82: -2123092737
+      LabSpriteSheetRev_83: -1178079545
+      LabSpriteSheetRev_84: -1179260547
+      LabSpriteSheetRev_85: 1724090399
+      LabSpriteSheetRev_86: -1076882250
+      LabSpriteSheetRev_87: -28919094
+      LabSpriteSheetRev_88: 1198697320
+      LabSpriteSheetRev_89: 153883421
+      LabSpriteSheetRev_9: -564729496
+      LabSpriteSheetRev_90: 1664794121
+      LabSpriteSheetRev_91: 411723843
+      LabSpriteSheetRev_92: 661579425
+      LabSpriteSheetRev_93: -1448272501
+      LabSpriteSheetRev_94: -1205074390
+      LabSpriteSheetRev_95: -990388292
+      LabSpriteSheetRev_96: -441053522
+      LabSpriteSheetRev_97: -186954776
+      LabSpriteSheetRev_98: 1441130765
+      LabSpriteSheetRev_99: 1612521610
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
