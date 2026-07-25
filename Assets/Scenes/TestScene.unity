@@ -13288,7 +13288,7 @@ MonoBehaviour:
   walkSpeed: 2
   minWalkDistance: 0.5
   deathAnimationLength: 0.2
-  playerVelocityAbsorbtion: 0.2
+  playerVelocityAbsorbtion: 0.4
   deathParticles: {fileID: 1617237253}
 --- !u!70 &1258332124
 CapsuleCollider2D:
@@ -14089,8 +14089,8 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1
-      minScalar: 0.5
+      scalar: 0.6
+      minScalar: 0.2
       maxCurve:
         serializedVersion: 2
         m_Curve:
