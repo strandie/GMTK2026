@@ -54,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private CapsuleCollider2D capsule;
     private SpriteRenderer spriteRenderer;
+    private Animator animator;
 
     private Vector2 moveInput;
     private float coyoteTimer;
@@ -61,13 +62,20 @@ public class PlayerMovement : MonoBehaviour
     private float wallJumpControlLockTimer;
     private bool jumpHeld;
     private bool grounded;
+    public bool IsGrounded() {return grounded;}
     private int wallSide;
+
+    public Vector2 GetInputVector()
+    {
+        return moveInput;
+    }
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         capsule = GetComponent<CapsuleCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
 
         rb.freezeRotation = true;
         rb.gravityScale = normalGravity;
@@ -122,6 +130,8 @@ public class PlayerMovement : MonoBehaviour
         ClampFallSpeed();
         UpdateSpriteDirection();
     }
+
+    public bool IsDashing(){ return flickDash != null && flickDash.IsDashing; }
 
     private void UpdateCollisionState()
     {
@@ -178,6 +188,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void ApplyHorizontalMovement()
     {
+        animator.SetBool("IsWalking", false);
         if (wallJumpControlLockTimer > 0f)
         {
             return;
@@ -190,6 +201,7 @@ public class PlayerMovement : MonoBehaviour
         if (grounded)
         {
             acceleration = hasInput ? groundAcceleration : groundDeceleration;
+            animator.SetBool("IsWalking", hasInput);
         }
         else
         {
