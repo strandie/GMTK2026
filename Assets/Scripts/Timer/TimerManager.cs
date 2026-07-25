@@ -21,7 +21,9 @@ public class TimerManager : MonoBehaviour
 
     public TextMeshProUGUI timerText;
     private float timer;
+    public bool StopTimer;
     [SerializeField] private TimerTextSpawner timerTextSpawner;
+    [SerializeField] private PlayerMovement player;
 
     [Header("Color Shift")]
     public float maxTimerValue = 60f;
@@ -56,13 +58,21 @@ public class TimerManager : MonoBehaviour
     void Start()
     {
         originalScale = timerText.transform.localScale.x;
-        timer = 10f;
+        timer = 20f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        timer -= Time.deltaTime;
+        if(!StopTimer) timer -= Time.deltaTime;
+
+        if(timer <= 0f && !StopTimer)
+        {
+            timer = 0f;
+            player.BeginDeath();
+            StopTimer = true;
+        }
+
         timerText.text = timer.ToString("00.00");
         timerText.color = timerColorOverTime.Evaluate(timer / maxTimerValue);
 
@@ -85,6 +95,7 @@ public class TimerManager : MonoBehaviour
     public void SetTimer(float val)
     {
         timer = val;
+        StopTimer = false;
     }
     public void AddToTimer(float val)
     {

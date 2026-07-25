@@ -1,8 +1,10 @@
 using UnityEngine;
 
+[RequireComponent(typeof(PlayerMovement))]
 public class FlickDash : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private PlayerMovement playerMovement;
 
     private Vector2 startMouseWorld;
     private Vector2 currentMouseWorld;
@@ -45,6 +47,7 @@ public class FlickDash : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        playerMovement = GetComponent<PlayerMovement>();
     }
 
 
@@ -63,6 +66,8 @@ public class FlickDash : MonoBehaviour
 
     private void Update()
     {
+        if(playerMovement.IsFrozen()) return;
+
         Vector2 mouseWorld = GetMouseWorld();
 
 

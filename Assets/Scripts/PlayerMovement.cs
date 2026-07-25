@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(CapsuleCollider2D))]
 public class PlayerMovement : MonoBehaviour
@@ -56,6 +57,10 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
+    public float deathLinearDamping = 5f;
+    public float deathDampingPercentVelocity = 0.8f;
+    private float originalLinearDamping;
+
     private Vector2 moveInput;
     private float coyoteTimer;
     private float jumpBufferTimer;
@@ -64,6 +69,11 @@ public class PlayerMovement : MonoBehaviour
     private bool grounded;
     public bool IsGrounded() {return grounded;}
     private int wallSide;
+
+    public bool DeathAnimationComplete = false;
+    public ParticleSystem DeathParticles;
+    private bool freezePlayer;
+    public bool IsFrozen() {return freezePlayer;}
 
     public Vector2 GetInputVector()
     {
@@ -79,6 +89,8 @@ public class PlayerMovement : MonoBehaviour
 
         rb.freezeRotation = true;
         rb.gravityScale = normalGravity;
+
+        originalLinearDamping = rb.linearDamping;
     }
 
     private void Update()
@@ -86,6 +98,8 @@ public class PlayerMovement : MonoBehaviour
         coyoteTimer -= Time.deltaTime;
         jumpBufferTimer -= Time.deltaTime;
         wallJumpControlLockTimer -= Time.deltaTime;
+
+        if(Input.GetKeyDown(KeyCode.R)) ResetPlayer(new Vector3(0f, 0.5f, 0f));
     }
 
     public void OnMovement(InputAction.CallbackContext context)
@@ -109,6 +123,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(freezePlayer)
+        {
+            return;
+        }
         UpdateCollisionState();
 
         if (grounded)
@@ -267,6 +285,63 @@ public class PlayerMovement : MonoBehaviour
     {
         if(!isWallSliding) return 0;
         return wallSide;
+    }
+
+    public void BeginDeath()
+    {
+        animator.SetBool("IsDead", true);
+        animator.SetBool("IsDashing", false);
+        animator.SetBool("WallSlide", false);
+        freezePlayer = true;
+        rb.bodyType = RigidbodyType2D.Kinematic;
+        //rb.linearDamping = deathLinearDamping;
+        StartCoroutine(DeathRoutine());
+    }
+    private IEnumerator DeathRoutine()
+    {
+        
+        int i = 0; // bailout
+        while(!DeathAnimationComplete && i < 600)
+        {
+            i++;
+            rb.linearVelocity *= deathDampingPercentVelocity;
+            if(rb.linearVelocity.magnitude < 0.01f) rb.linearVelocity = Vector2.zero;
+            yield return null;
+        }
+
+        DeathParticles.Play();
+        animator.enabled = false;
+    }
+
+    public void ResetPlayer(Vector3 position)
+    {
+        animator.enabled = true;
+        animator.SetBool("IsMoving", false);
+        animator.SetBool("Grounded", false);
+        animator.SetBool("IsDashing", false);
+        animator.SetBool("WallSlide", false);
+        animator.SetBool("IsDead", false);
+
+        rb.linearVelocity = Vector2.zero;
+        rb.bodyType = RigidbodyType2D.Dynamic;
+        rb.linearDamping = originalLinearDamping;
+
+        transform.position = position;
+        DeathParticles.Stop();
+
+        isWallSliding = false;
+        wasWallSliding = false;
+        cameFromFastFall = false;
+
+        coyoteTimer = 0f;
+        jumpBufferTimer = 0f;
+        wallJumpControlLockTimer = 0f;
+        jumpHeld = false;
+        grounded = false;
+
+        freezePlayer = false;
+
+        TimerManager.Instance.SetTimer(10f);
     }
 
     private void ApplyBetterGravity()
