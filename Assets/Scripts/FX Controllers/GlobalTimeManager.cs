@@ -18,11 +18,7 @@ public class GlobalTimeManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    private float timeScale = 1f;
     private float fixedDeltaTime;
-
-    private float lastTimeScale = 1f;
-    private float targetTimeScale = 1f;
     private Coroutine timeChangeCoroutine;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -34,8 +30,6 @@ public class GlobalTimeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Time.timeScale = timeScale;
-        //Time.fixedDeltaTime = fixedDeltaTime * Time.timeScale;
     }
 
     public void SetTimeScale(float newTimeScale, float duration, float easeInSpeed = 10f, float easeOutSpeed = 10f)
@@ -49,7 +43,6 @@ public class GlobalTimeManager : MonoBehaviour
 
     private IEnumerator SetTimeScaleRoutine(float targetTimeScale, float duration, float easeInSpeed, float easeOutSpeed)
     {
-        Debug.Log("Changing Speed");
         // 1. Ease down to slow motion
         while (Mathf.Abs(Time.timeScale - targetTimeScale) > 0.05f)
         {
@@ -61,11 +54,9 @@ public class GlobalTimeManager : MonoBehaviour
         Time.timeScale = targetTimeScale;
         Time.fixedDeltaTime = fixedDeltaTime * targetTimeScale;
 
-        Debug.Log("Yield at target speed");
         // 2. Stay slowed down for target duration using real time
         yield return new WaitForSecondsRealtime(duration);
 
-        Debug.Log("Return to normal speed");
         // 3. Ease back up to normal speed
         while (Mathf.Abs(Time.timeScale - 1f) > 0.05f)
         {

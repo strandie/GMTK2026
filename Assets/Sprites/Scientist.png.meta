@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b5d6cca9376fcd94891d7871b8bc60e9
+guid: a08c243d2d7a3e742b0848e3788f2159
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,51 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Scientist_0
+      name: Scientist (1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a1e18aac678bd49b9d119cfc2f3ffe
+      internalID: -1352199268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist (1)_1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e513c7d7bba44e48b34997b40008dc5
+      internalID: 940754841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist (1)_2
       rect:
         serializedVersion: 2
         x: 0
@@ -118,21 +162,43 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84fce843bd34a79469d861461ceead39
-      internalID: -2107241588
+      spriteID: 4ae8551664aeb384894f8e6d702bce51
+      internalID: -1307020339
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Scientist_1
+      name: Scientist (1)_3
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80a4be127a0e08c46a59f86cb99b68ac
+      internalID: 1282449530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist (1)_4
       rect:
         serializedVersion: 2
         x: 0
@@ -140,15 +206,37 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c021d770f29dcb46a8a01aeb9d7fc57
-      internalID: -697856419
+      spriteID: 7831dc8424cce994f921b02a29a787c9
+      internalID: -1661941504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientist (1)_5
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25329c297a903684fb6f3cfb97004162
+      internalID: 791728487
       vertices: []
       indices: 
       edges: []
@@ -157,7 +245,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 128e46b3ef162864d9d717738c238ec3
+    spriteID: ffa27d65d4fe3be47a740bb6741a55f7
     internalID: 0
     vertices: []
     indices: 
@@ -165,10 +253,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":8.0,"y":8.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Scientist_0: -2107241588
-      Scientist_1: -697856419
+      Scientist (1)_0: -1352199268
+      Scientist (1)_1: 940754841
+      Scientist (1)_2: -1307020339
+      Scientist (1)_3: 1282449530
+      Scientist (1)_4: -1661941504
+      Scientist (1)_5: 791728487
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

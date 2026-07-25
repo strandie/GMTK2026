@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class ScientistController : MonoBehaviour
@@ -10,12 +11,16 @@ public class ScientistController : MonoBehaviour
     public float maxTimeUntilWander = 10f;
     public float walkSpeed = 2f;
     public float minWalkDistance = 0.5f;
+    public float deathAnimationLength = 0.5f;
+    public float playerVelocityAbsorbtion = 0.2f;
+    private bool dead;
 
     private float idleTimer = 0f;
     private float timeUntilWander = 0f;
     private Vector2 wanderDestination;
 
     private Animator animator;
+    [SerializeField] private ParticleSystem deathParticles;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -44,6 +49,7 @@ public class ScientistController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(dead) return;
         if(idleTimer > timeUntilWander)
         {
             // Walk to wander point
@@ -73,11 +79,36 @@ public class ScientistController : MonoBehaviour
             PlayerMovement player = col.GetComponent<PlayerMovement>();
             
             player.TriggerKillEnemy();
+            var playerRB = player.GetComponent<Rigidbody2D>();
+            Vector2 velocity = playerRB.linearVelocity;
+            rb.bodyType = RigidbodyType2D.Dynamic;
+
+            rb.linearVelocity = velocity * playerVelocityAbsorbtion;
 
             // Trigger death
-
-            Destroy(gameObject);
+            StartCoroutine(DeathRoutine());
         }
+    }
+
+    private IEnumerator DeathRoutine()
+    {
+        animator.SetTrigger("Death");
+        dead = true;
+
+        // Wait until animations complete
+        float t = 0f;
+        while(t < deathAnimationLength)
+        {
+            t += Time.deltaTime;
+            yield return null;
+        }
+
+        deathParticles.Play();
+        yield return null;
+
+        // prevent particles from getting destroyed with parent
+        deathParticles.transform.parent = null;
+        Destroy(gameObject);
     }
 
 
