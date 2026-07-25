@@ -188,7 +188,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void ApplyHorizontalMovement()
     {
-        animator.SetBool("IsWalking", false);
+        //animator.SetBool("IsWalking", false);
         if (wallJumpControlLockTimer > 0f)
         {
             return;
@@ -201,7 +201,7 @@ public class PlayerMovement : MonoBehaviour
         if (grounded)
         {
             acceleration = hasInput ? groundAcceleration : groundDeceleration;
-            animator.SetBool("IsWalking", hasInput);
+            //animator.SetBool("IsWalking", hasInput);
         }
         else
         {
@@ -300,6 +300,15 @@ public class PlayerMovement : MonoBehaviour
                 -maxFallSpeed
             );
         }
+    }
+
+    public float GetMovementAngleDegrees()
+    {
+        return Mathf.Rad2Deg * Mathf.Atan2(rb.linearVelocityY, rb.linearVelocityX);
+    }
+    public float GetRBSpeed()
+    {
+        return rb.linearVelocity.magnitude;
     }
 
     public void TriggerKillEnemy()
