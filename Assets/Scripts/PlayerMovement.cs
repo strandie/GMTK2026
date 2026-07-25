@@ -295,7 +295,7 @@ public class PlayerMovement : MonoBehaviour
         // On killing an enemy, add to timer
 
         // Trigger a global slowdown effect
-        GlobalTimeManager.Instance.SetTimeScale(killTimeSlowdown, killTimeSlowdownDuration);
+        GlobalTimeScaleManager.Instance.SetTimeScale(killTimeSlowdown, killTimeSlowdownDuration);
     }
 
     private void UpdateSpriteDirection()

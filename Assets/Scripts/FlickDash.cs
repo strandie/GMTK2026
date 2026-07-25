@@ -27,6 +27,8 @@ public class FlickDash : MonoBehaviour
     [Header("Flick Settings")]
     public float velocityMultiplier = 5f;
     public float maxVelocity = 25f;
+    public float dashCostScale = 0.5f;
+    public float flatDashCost = 1f;
 
 
     [Header("Distance Limits")]
@@ -36,6 +38,7 @@ public class FlickDash : MonoBehaviour
 
     [Header("Debug")]
     public DashVisualizer visualizer;
+    public float visualizerScale = 0.5f; // Tune to approximately match distance travelled
 
 
 
@@ -114,7 +117,7 @@ public class FlickDash : MonoBehaviour
 
             visualizer?.Draw(
                 flickDirection,
-                flickDistance
+                CalculateFlickSpeed() * visualizerScale
             );
         }
 
@@ -132,18 +135,7 @@ public class FlickDash : MonoBehaviour
                 flickTime > 0
             )
             {
-                float speed =
-                    (flickDistance / flickTime)
-                    *
-                    velocityMultiplier;
-
-
-                speed =
-                    Mathf.Clamp(
-                        speed,
-                        0,
-                        maxVelocity
-                    );
+                float speed = CalculateFlickSpeed();
 
 
                 Vector2 dashVelocity =
@@ -163,6 +155,10 @@ public class FlickDash : MonoBehaviour
                 IsDashing = true;
 
                 dashTimer = 0;
+
+                // Trigger timer cost
+                
+                TimerManager.Instance.SubtractFromTimer(flatDashCost + speed * 0.05f * dashCostScale);
             }
 
 
@@ -178,6 +174,23 @@ public class FlickDash : MonoBehaviour
 
             visualizer?.Hide();
         }
+    }
+
+    private float CalculateFlickSpeed()
+    {
+        float speed =
+            (flickDistance / flickTime)
+            *
+            velocityMultiplier;
+
+
+        speed =
+            Mathf.Clamp(
+                speed,
+                0,
+                maxVelocity
+            );
+        return speed;
     }
 
 

@@ -1,9 +1,9 @@
 using UnityEngine;
 using System.Collections;
 
-public class GlobalTimeManager : MonoBehaviour
+public class GlobalTimeScaleManager : MonoBehaviour
 {
-    public static GlobalTimeManager Instance {get; private set;}
+    public static GlobalTimeScaleManager Instance {get; private set;}
 
     private void Awake()
     {
