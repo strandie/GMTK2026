@@ -29,8 +29,7 @@ public class TimerTextSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Random.Range(0f, 1f) > 0.95f)
-            SpawnTextNumber(Random.Range(-5f, 5f));
+        
     }
 
     public void SpawnTextNumber(float value)

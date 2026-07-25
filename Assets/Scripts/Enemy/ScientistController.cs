@@ -13,6 +13,7 @@ public class ScientistController : MonoBehaviour
     public float minWalkDistance = 0.5f;
     public float deathAnimationLength = 0.5f;
     public float playerVelocityAbsorbtion = 0.2f;
+    public float timerValue = 3f;
     private bool dead;
 
     private float idleTimer = 0f;
@@ -94,6 +95,7 @@ public class ScientistController : MonoBehaviour
     {
         animator.SetTrigger("Death");
         dead = true;
+        TimerManager.Instance.AddToTimer(timerValue);
 
         // Wait until animations complete
         float t = 0f;
@@ -108,6 +110,7 @@ public class ScientistController : MonoBehaviour
 
         // prevent particles from getting destroyed with parent
         deathParticles.transform.parent = null;
+
         Destroy(gameObject);
     }
 
