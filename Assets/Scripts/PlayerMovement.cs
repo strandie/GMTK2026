@@ -44,6 +44,10 @@ public class PlayerMovement : MonoBehaviour
     private bool cameFromFastFall;
     private float wallSlideDuration = 0f;
 
+    [Header("Slowdown Effect")]
+    [SerializeField] private float killTimeSlowdown = 0.5f;
+    [SerializeField] private float killTimeSlowdownDuration = 0.5f;
+
     [Header("Dash Reference")]
     [SerializeField] private FlickDash flickDash;
 
@@ -284,6 +288,14 @@ public class PlayerMovement : MonoBehaviour
                 -maxFallSpeed
             );
         }
+    }
+
+    public void TriggerKillEnemy()
+    {
+        // On killing an enemy, add to timer
+
+        // Trigger a global slowdown effect
+        GlobalTimeManager.Instance.SetTimeScale(killTimeSlowdown, killTimeSlowdownDuration);
     }
 
     private void UpdateSpriteDirection()

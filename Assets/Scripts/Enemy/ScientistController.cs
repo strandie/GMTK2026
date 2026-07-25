@@ -66,6 +66,20 @@ public class ScientistController : MonoBehaviour
         else idleTimer += Time.deltaTime;
     }
 
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.tag == "Player")
+        {
+            PlayerMovement player = col.GetComponent<PlayerMovement>();
+            
+            player.TriggerKillEnemy();
+
+            // Trigger death
+
+            Destroy(gameObject);
+        }
+    }
+
 
     void OnDrawGizmosSelected()
     {
