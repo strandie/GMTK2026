@@ -277,6 +277,8 @@ public class FlickDash : MonoBehaviour
  
     private float lowSpeedTimer;
     private float motionCooldownTimer;
+
+    public bool mouseHidden = false;
  
  
     [Header("Debug")]
@@ -318,6 +320,17 @@ public class FlickDash : MonoBehaviour
         else
         {
             UpdateClickDragMode();
+        }
+
+        if(mouseHidden)
+        {
+            if (Input.GetKey(KeyCode.Escape))
+                Cursor.lockState = CursorLockMode.None;
+            
+            if (Input.GetMouseButtonDown(0))
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+            }
         }
     }
  
