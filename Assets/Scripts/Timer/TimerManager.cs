@@ -69,7 +69,7 @@ public class TimerManager : MonoBehaviour
         if(timer <= 0f && !StopTimer)
         {
             timer = 0f;
-            player.BeginDeath();
+            PlayerMovement.Instance.BeginDeath();
             StopTimer = true;
         }
 
