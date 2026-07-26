@@ -112,6 +112,12 @@ public class PlayerMovement : MonoBehaviour
                 BeginDeath();
             }
         }
+
+        if (Input.GetKey(KeyCode.Escape))
+            Cursor.lockState = CursorLockMode.None;
+        
+        if (Input.GetMouseButtonDown(0))
+            Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void OnMovement(InputAction.CallbackContext context)
@@ -327,12 +333,17 @@ public class PlayerMovement : MonoBehaviour
         
         yield return null;
 
-        if(playerTriggeredDeathFromRespawn) ResetPlayer(spawnLocation.position);
+        ResetPlayer(spawnLocation.position);
     }
 
     public void ResetPlayer(Vector3 position)
     {
-        if(!DeathAnimationComplete) return;
+        if(!DeathAnimationComplete)
+        {
+            // Restart death routine to hopefully restart death
+            StartCoroutine(DeathRoutine());
+            return;
+        }
 
         animator.enabled = true;
         animator.SetBool("IsMoving", false);
