@@ -5,6 +5,7 @@ using System.Collections;
 [RequireComponent(typeof(Rigidbody2D), typeof(CapsuleCollider2D))]
 public class PlayerMovement : MonoBehaviour
 {
+    public Transform spawnLocation;
     [Header("Collision")]
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float groundCheckDistance = 0.08f;
@@ -71,6 +72,7 @@ public class PlayerMovement : MonoBehaviour
     private int wallSide;
 
     public bool DeathAnimationComplete = false;
+    private bool playerTriggeredDeathFromRespawn = false;
     public ParticleSystem DeathParticles;
     private bool freezePlayer;
     public bool IsFrozen() {return freezePlayer;}
@@ -91,6 +93,8 @@ public class PlayerMovement : MonoBehaviour
         rb.gravityScale = normalGravity;
 
         originalLinearDamping = rb.linearDamping;
+
+        transform.position = spawnLocation.position;
     }
 
     private void Update()
@@ -99,7 +103,15 @@ public class PlayerMovement : MonoBehaviour
         jumpBufferTimer -= Time.deltaTime;
         wallJumpControlLockTimer -= Time.deltaTime;
 
-        if(Input.GetKeyDown(KeyCode.R)) ResetPlayer(new Vector3(0f, 0.5f, 0f));
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            if(DeathAnimationComplete) ResetPlayer(spawnLocation.position);
+            else
+            {
+                playerTriggeredDeathFromRespawn = true;
+                BeginDeath();
+            }
+        }
     }
 
     public void OnMovement(InputAction.CallbackContext context)
@@ -309,12 +321,19 @@ public class PlayerMovement : MonoBehaviour
             yield return null;
         }
 
+        DeathAnimationComplete = true;
         DeathParticles.Play();
         animator.enabled = false;
+        
+        yield return null;
+
+        if(playerTriggeredDeathFromRespawn) ResetPlayer(spawnLocation.position);
     }
 
     public void ResetPlayer(Vector3 position)
     {
+        if(!DeathAnimationComplete) return;
+
         animator.enabled = true;
         animator.SetBool("IsMoving", false);
         animator.SetBool("Grounded", false);
@@ -327,7 +346,7 @@ public class PlayerMovement : MonoBehaviour
         rb.linearDamping = originalLinearDamping;
 
         transform.position = position;
-        DeathParticles.Stop();
+        //DeathParticles.Stop();
 
         isWallSliding = false;
         wasWallSliding = false;

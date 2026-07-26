@@ -25,6 +25,8 @@ public class TimerManager : MonoBehaviour
     [SerializeField] private TimerTextSpawner timerTextSpawner;
     [SerializeField] private PlayerMovement player;
 
+    public float timerStartValue = 20f;
+
     [Header("Color Shift")]
     public float maxTimerValue = 60f;
     public Gradient timerColorOverTime;
@@ -58,7 +60,7 @@ public class TimerManager : MonoBehaviour
     void Start()
     {
         originalScale = timerText.transform.localScale.x;
-        timer = 20f;
+        timer = timerStartValue;
     }
 
     // Update is called once per frame
@@ -73,7 +75,7 @@ public class TimerManager : MonoBehaviour
             StopTimer = true;
         }
 
-        timerText.text = timer.ToString("00.00");
+        timerText.text = "<mspace=0.35em>" + timer.ToString("00.00") + "</mspace>";
         timerText.color = timerColorOverTime.Evaluate(timer / maxTimerValue);
 
         sizeScale = Mathf.MoveTowards(sizeScale, targetSizeScale,

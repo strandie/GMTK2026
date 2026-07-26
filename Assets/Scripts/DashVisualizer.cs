@@ -5,6 +5,11 @@ public class DashVisualizer : MonoBehaviour
     public LineRenderer line;
     public Transform lineTip;
 
+    public void Start()
+    {
+        line.enabled = false;
+    }
+
     public void Draw(Vector2 direction, float length)
     {
         line.enabled = true;

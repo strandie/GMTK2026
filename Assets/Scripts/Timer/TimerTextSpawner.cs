@@ -7,6 +7,7 @@ public class TimerTextSpawner : MonoBehaviour
     public float spawnAreaHeight = 1f;
     public float textMoveSpeed = 0.2f;
     public float textLifeSpan = 1f;
+    public float scale = 1f;
 
     [Header("Randomized settings")]
     public float minAngleRotate = -10f;
@@ -54,8 +55,8 @@ public class TimerTextSpawner : MonoBehaviour
         textSettings.startColor = textColor;
         Color endColor = textColor; endColor.a = 0f;
         textSettings.endColor = endColor;
-        textSettings.startScale = textSize;
-        textSettings.endScale = textSize * 0.8f;
+        textSettings.startScale = textSize * scale;
+        textSettings.endScale = textSize * 0.8f * scale;
         textSettings.lifeSpan = textLifeSpan;
         textSettings.textValue = text;
 
