@@ -86,8 +86,10 @@ public class ScientistController : AbstractEnemyController
             var collider = GetComponent<Collider2D>();
             collider.isTrigger = false;
 
-            LayerMask groundMask = LayerMask.GetMask("Ground");
-            collider.includeLayers = groundMask;
+            //LayerMask groundMask = LayerMask.GetMask("Ground");
+            //collider.includeLayers = groundMask;
+            LayerMask playerMask = LayerMask.GetMask("Player");
+            collider.excludeLayers = playerMask;
 
             rb.linearVelocity = velocity * playerVelocityAbsorbtion;
 
@@ -133,6 +135,9 @@ public class ScientistController : AbstractEnemyController
         //deathParticles.transform.parent = transform;
         transform.position = position;
         animator.SetTrigger("Reset");
+
+        LayerMask nothingMask = 0;
+        collider.excludeLayers = nothingMask;
     }
 
 

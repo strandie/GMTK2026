@@ -422,7 +422,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 1923.35
+  m_fontSize: 960
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4947,10 +4947,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 848591137709693309, guid: e2e260216411a9d4f88883189f985268, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1246189692952762599, guid: e2e260216411a9d4f88883189f985268, type: 3}
       propertyPath: spawnLocation
       value: 
       objectReference: {fileID: 202620100}
+    - target: {fileID: 1402282090460029747, guid: e2e260216411a9d4f88883189f985268, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1467335006616395689, guid: e2e260216411a9d4f88883189f985268, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4991,6 +4999,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2709179003757560245, guid: e2e260216411a9d4f88883189f985268, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2843549557603430390, guid: e2e260216411a9d4f88883189f985268, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420793637341224897, guid: e2e260216411a9d4f88883189f985268, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470457194465449612, guid: e2e260216411a9d4f88883189f985268, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6431980372421767997, guid: e2e260216411a9d4f88883189f985268, type: 3}
       propertyPath: motionStopDelay
       value: 0.03
@@ -5006,6 +5030,18 @@ PrefabInstance:
     - target: {fileID: 6726594834584294889, guid: e2e260216411a9d4f88883189f985268, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726594834584294889, guid: e2e260216411a9d4f88883189f985268, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8665818992023886427, guid: e2e260216411a9d4f88883189f985268, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8879850963580567354, guid: e2e260216411a9d4f88883189f985268, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
