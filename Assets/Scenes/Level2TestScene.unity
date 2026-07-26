@@ -1508,7 +1508,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimerManager
   timerText: {fileID: 1018250713}
+  StopTimer: 0
   timerTextSpawner: {fileID: 0}
+  player: {fileID: 0}
+  timerStartValue: 20
   maxTimerValue: 60
   timerColorOverTime:
     serializedVersion: 2
@@ -1666,7 +1669,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1416192489605802739, guid: 0de282b08a51e6f48b1ad1f4ee57c1a1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 1416192489605802739, guid: 0de282b08a51e6f48b1ad1f4ee57c1a1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1697,8 +1700,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2703696479155684334, guid: 0de282b08a51e6f48b1ad1f4ee57c1a1, type: 3}
-      propertyPath: startCovered
-      value: 1
+      propertyPath: speed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2703696479155684334, guid: 0de282b08a51e6f48b1ad1f4ee57c1a1, type: 3}
+      propertyPath: nextScene
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5326636969353711552, guid: 0de282b08a51e6f48b1ad1f4ee57c1a1, type: 3}
       propertyPath: m_Name
@@ -2177,7 +2184,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 205553611577736989, guid: e9a4a9be3de7acf47aceb4d723e2b40f, type: 3}
       propertyPath: orthographic size
-      value: 5.859375
+      value: 6.71875
       objectReference: {fileID: 0}
     - target: {fileID: 1331875792795533772, guid: e9a4a9be3de7acf47aceb4d723e2b40f, type: 3}
       propertyPath: m_Name

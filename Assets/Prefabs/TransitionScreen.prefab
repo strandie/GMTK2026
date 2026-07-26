@@ -105,6 +105,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 524de3754ce44464a8fc3429be36b940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScreenWipe
-  speed: 100
+  speed: 50
   nextScene: 
   startCovered: 0

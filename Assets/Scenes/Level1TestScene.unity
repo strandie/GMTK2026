@@ -1186,6 +1186,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1246189692952762599, guid: e2e260216411a9d4f88883189f985268, type: 3}
+      propertyPath: spawnLocation
+      value: 
+      objectReference: {fileID: 1817878041}
     - target: {fileID: 1467335006616395689, guid: e2e260216411a9d4f88883189f985268, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.97442
@@ -1315,6 +1319,17 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   MaxHueSpeedValue: 10
+--- !u!114 &901036801 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1246189692952762599, guid: e2e260216411a9d4f88883189f985268, type: 3}
+  m_PrefabInstance: {fileID: 901036793}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901036794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b77d16b90bb2e714eb8b9bf60e60ed45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &915806976
 GameObject:
   m_ObjectHideFlags: 0
@@ -1508,7 +1523,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimerManager
   timerText: {fileID: 1018250713}
+  StopTimer: 0
   timerTextSpawner: {fileID: 0}
+  player: {fileID: 901036801}
+  timerStartValue: 20
   maxTimerValue: 60
   timerColorOverTime:
     serializedVersion: 2
@@ -2116,7 +2134,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 205553611577736989, guid: e9a4a9be3de7acf47aceb4d723e2b40f, type: 3}
       propertyPath: orthographic size
-      value: 5.859375
+      value: 6.71875
       objectReference: {fileID: 0}
     - target: {fileID: 1331875792795533772, guid: e9a4a9be3de7acf47aceb4d723e2b40f, type: 3}
       propertyPath: m_Name
@@ -2172,6 +2190,37 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 205553611577736989, guid: e9a4a9be3de7acf47aceb4d723e2b40f, type: 3}
   m_PrefabInstance: {fileID: 1668820615}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1817878040
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1817878041}
+  m_Layer: 0
+  m_Name: Spawn Location
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1817878041
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817878040}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &919109653667181627
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2223,6 +2272,10 @@ PrefabInstance:
     - target: {fileID: 2703696479155684334, guid: 0de282b08a51e6f48b1ad1f4ee57c1a1, type: 3}
       propertyPath: nextScene
       value: Level2TestScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 2703696479155684334, guid: 0de282b08a51e6f48b1ad1f4ee57c1a1, type: 3}
+      propertyPath: startCovered
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5326636969353711552, guid: 0de282b08a51e6f48b1ad1f4ee57c1a1, type: 3}
       propertyPath: m_Name
@@ -2312,3 +2365,4 @@ SceneRoots:
   - {fileID: 901036793}
   - {fileID: 1728683260682289189}
   - {fileID: 919109653667181627}
+  - {fileID: 1817878041}
