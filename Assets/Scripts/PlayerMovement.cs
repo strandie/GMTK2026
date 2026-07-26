@@ -75,6 +75,21 @@ public class PlayerMovement : MonoBehaviour
     private bool playerTriggeredDeathFromRespawn = false;
     public ParticleSystem DeathParticles;
     private bool freezePlayer;
+    private Vector2 storedVelOnFreeze;
+    public void FreezePlayer()
+    {
+        freezePlayer = true;
+        storedVelOnFreeze = rb.linearVelocity;
+        rb.linearVelocity = Vector2.zero;
+        rb.bodyType = RigidbodyType2D.Kinematic;
+    }
+    public void UnfreezePlayer() 
+    {
+        freezePlayer = false;
+        rb.linearVelocity = storedVelOnFreeze;
+        rb.bodyType = RigidbodyType2D.Dynamic;
+    }
+    
     public bool IsFrozen() {return freezePlayer;}
 
     public Vector2 GetInputVector()
