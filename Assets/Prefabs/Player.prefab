@@ -15327,12 +15327,12 @@ MonoBehaviour:
     m_Bits: 8
   groundCheckDistance: 0.1
   wallCheckDistance: 0.08
-  maxRunSpeed: 9
+  maxRunSpeed: 8
   groundAcceleration: 110
   groundDeceleration: 140
   airAcceleration: 70
   airDeceleration: 45
-  jumpVelocity: 14
+  jumpVelocity: 12
   coyoteTime: 0.15
   jumpBufferTime: 0.1
   normalGravity: 3.5
@@ -15436,12 +15436,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlickDash
   dashDuration: 0.25
-  velocityMultiplier: 0.5
-  maxVelocity: 25
-  dashCostScale: 3
-  flatDashCost: 1
+  velocityMultiplier: 0.6
+  maxVelocity: 30
+  dashCostScale: 0.3
+  flatDashCost: 0.25
   mouseSensitivity: 0.2
-  maxFlickDistance: 150
+  maxFlickDistance: 180
   minimumFlickDistance: 0.2
   motionTriggeredMode: 0
   motionStartSpeedThreshold: 1

@@ -33827,7 +33827,7 @@ MonoBehaviour:
   StopTimer: 0
   timerTextSpawner: {fileID: 918555804}
   player: {fileID: 0}
-  timerStartValue: 20
+  timerStartValue: 5
   maxTimerValue: 60
   timerColorOverTime:
     serializedVersion: 2
