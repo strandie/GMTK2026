@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1416192489605802739}
   - component: {fileID: 5576211349049412686}
-  - component: {fileID: 2703696479155684334}
   m_Layer: 0
   m_Name: TransitionScreen
   m_TagString: Untagged
@@ -93,18 +92,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!114 &2703696479155684334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5326636969353711552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 524de3754ce44464a8fc3429be36b940, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ScreenWipe
-  speed: 50
-  nextScene: 
-  startCovered: 0
