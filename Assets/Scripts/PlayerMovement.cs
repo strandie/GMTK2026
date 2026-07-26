@@ -161,7 +161,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnMovement(InputAction.CallbackContext context)
     {
-        moveInput = context.ReadValue<Vector2>();
+        //moveInput = context.ReadValue<Vector2>();
     }
 
     public void OnJump(InputAction.CallbackContext context)
@@ -490,14 +490,23 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-        if (moveInput.x > 0.1f)
+        if (rb.linearVelocityX > 0.1f)
+        {
+            spriteRenderer.flipX = false;
+        }
+        else if (rb.linearVelocityX < -0.1f)
+        {
+            spriteRenderer.flipX = true;
+        }
+
+        /*if (moveInput.x > 0.1f)
         {
             spriteRenderer.flipX = false;
         }
         else if (moveInput.x < -0.1f)
         {
             spriteRenderer.flipX = true;
-        }
+        }*/
     }
 
     private void OnDrawGizmosSelected()

@@ -5090,7 +5090,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScientistController
   wanderRadius: 2.92
-  minTimeUntilWander: 2
+  minTimeUntilWander: 0.5
   maxTimeUntilWander: 6
   walkSpeed: 2
   minWalkDistance: 0.5

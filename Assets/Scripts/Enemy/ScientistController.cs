@@ -138,6 +138,7 @@ public class ScientistController : AbstractEnemyController
 
     public override void ResetEnemy(Vector3 position)
     {
+        isDead = false;
         spriteRenderer.enabled = true;
         rb.bodyType = RigidbodyType2D.Kinematic;
         rb.linearVelocity = Vector2.zero;
