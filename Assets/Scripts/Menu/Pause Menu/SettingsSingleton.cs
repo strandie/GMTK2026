@@ -28,7 +28,7 @@ public class SettingsSingleton : MonoBehaviour
     public void SetSFXVolume(float newVol)
     {
         sfxVolume = newVol;
-        AudioManager.Instance.SetSFXVolume(musicVolume);
+        AudioManager.Instance.SetSFXVolume(sfxVolume);
     }
     private bool mouseHidden = false;
     public bool GetMouseHidden() {return mouseHidden;}

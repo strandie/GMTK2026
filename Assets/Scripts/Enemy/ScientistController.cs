@@ -19,6 +19,12 @@ public class ScientistController : AbstractEnemyController
     private float timeUntilWander = 0f;
     private Vector2 wanderDestination;
 
+    [Header("SFX")]
+    public AudioClip hit1SFX;
+    public Vector2 hit1randPitchRange = Vector2.one;
+    public AudioClip hit2SFX;
+    public Vector2 hit2randPitchRange = Vector2.one;
+
     private Animator animator;
     [SerializeField] private ParticleSystem deathParticles;
 
@@ -104,6 +110,9 @@ public class ScientistController : AbstractEnemyController
         isDead = true;
         TimerManager.Instance.AddToTimer(timerValue);
 
+        AudioManager.Instance.sfxManager.PlayClip(hit1SFX, 1f,
+                Random.Range(hit1randPitchRange.x, hit1randPitchRange.y));
+
         // Wait until animations complete
         float t = 0f;
         while(t < deathAnimationLength)
@@ -113,7 +122,10 @@ public class ScientistController : AbstractEnemyController
         }
 
         deathParticles.Play();
+        AudioManager.Instance.sfxManager.PlayClip(hit2SFX, 1f,
+                Random.Range(hit2randPitchRange.x, hit2randPitchRange.y));
         yield return null;
+        
 
         spriteRenderer.enabled = false;
         rb.bodyType = RigidbodyType2D.Kinematic;
