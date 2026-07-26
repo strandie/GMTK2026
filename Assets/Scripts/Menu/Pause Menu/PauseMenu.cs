@@ -40,9 +40,10 @@ public class PauseMenu : MonoBehaviour
     {
         Transform settingsContent = settingsMenu.GetChild(0).GetChild(0);
         // Update volume
-        settingsContent.GetChild(0).GetComponentInChildren<Slider>().value = SettingsSingleton.Instance.GetVolume();
-        settingsContent.GetChild(1).GetComponentInChildren<Toggle>().isOn = SettingsSingleton.Instance.GetMouseHidden();
-        settingsContent.GetChild(2).GetComponentInChildren<Toggle>().isOn = SettingsSingleton.Instance.GetClicklessDashEnabled();
+        settingsContent.GetChild(0).GetComponentInChildren<Slider>().value = SettingsSingleton.Instance.GetMusicVolume();
+        settingsContent.GetChild(1).GetComponentInChildren<Slider>().value = SettingsSingleton.Instance.GetSFXVolume();
+        settingsContent.GetChild(2).GetComponentInChildren<Toggle>().isOn = SettingsSingleton.Instance.GetMouseHidden();
+        settingsContent.GetChild(3).GetComponentInChildren<Toggle>().isOn = SettingsSingleton.Instance.GetClicklessDashEnabled();
     }
 
     public void RevealMenu()

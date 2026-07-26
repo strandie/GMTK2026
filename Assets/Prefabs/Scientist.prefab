@@ -3850,7 +3850,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 8
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -5094,6 +5094,11 @@ MonoBehaviour:
   maxTimeUntilWander: 6
   walkSpeed: 2
   minWalkDistance: 0.5
-  deathAnimationLength: 0.2
+  deathAnimationLength: 0.1
   playerVelocityAbsorbtion: 0.4
+  timerValue: 3
+  hit1SFX: {fileID: 8300000, guid: bc1e033ae5625ec4f947de1a6f39a311, type: 3}
+  hit1randPitchRange: {x: 0.8, y: 1.1}
+  hit2SFX: {fileID: 8300000, guid: f3003a99fd90eae49bb0dfcbae300ccd, type: 3}
+  hit2randPitchRange: {x: 0.9, y: 1.1}
   deathParticles: {fileID: 1455573813496478101}

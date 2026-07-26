@@ -74,6 +74,12 @@ public class PlayerMovement : MonoBehaviour
     private int wallSide;
 
     public bool DeathAnimationComplete = false;
+    public AudioClip DeathSFX;
+    public Vector2 deathSFXpitchRange = Vector2.one;
+    public AudioClip DeathSFX2;
+    public Vector2 deathSFX2pitchRange = Vector2.one;
+    public AudioSource walkSound;
+    public AudioSource slideSound;
     private bool playerTriggeredDeathFromRespawn = false;
     public ParticleSystem DeathParticles;
     private bool freezePlayer;
@@ -84,6 +90,8 @@ public class PlayerMovement : MonoBehaviour
     }
     private IEnumerator FreezePlayerStateRoutine()
     {
+        walkSound.Stop();
+        slideSound.Stop();
         bool playerIsDying = false;
         if(deathRoutine != null)
         {
@@ -181,6 +189,15 @@ public class PlayerMovement : MonoBehaviour
         if (grounded)
         {
             coyoteTimer = coyoteTime;
+            if(rb.linearVelocity.magnitude > 0.1f)
+            {
+                if(!walkSound.isPlaying) walkSound.Play();
+            }
+            else walkSound.Stop();
+        }
+        else
+        {
+            if(walkSound.isPlaying) walkSound.Stop();
         }
 
         bool isDashing = flickDash != null && flickDash.IsDashing;
@@ -291,6 +308,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (!isWallSliding)
         {
+            if(slideSound.isPlaying) slideSound.Stop();
             wasWallSliding = false;
             wallSlideDuration = 0f;
             return;
@@ -304,6 +322,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (justEntered)
         {
+            slideSound.Play();
             cameFromFastFall = rb.linearVelocity.y < -wallSlideFastFallThreshold;
         }
 
@@ -349,7 +368,11 @@ public class PlayerMovement : MonoBehaviour
     }
     private IEnumerator DeathRoutine()
     {
-        
+        walkSound.Stop();
+        slideSound.Stop();
+
+        AudioManager.Instance.sfxManager.PlayClip(DeathSFX, 1f,
+            Random.Range(deathSFXpitchRange.x, deathSFXpitchRange.y));
         int i = 0; // bailout
         while(!DeathAnimationComplete && i < 600)
         {
@@ -361,6 +384,8 @@ public class PlayerMovement : MonoBehaviour
 
         DeathAnimationComplete = true;
         DeathParticles.Play();
+        AudioManager.Instance.sfxManager.PlayClip(DeathSFX2, 1f,
+            Random.Range(deathSFX2pitchRange.x, deathSFX2pitchRange.y));
         animator.enabled = false;
         
         yield return null;
