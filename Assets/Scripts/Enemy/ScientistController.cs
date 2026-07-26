@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class ScientistController : MonoBehaviour
+public class ScientistController : AbstractEnemyController
 {
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rb;
@@ -14,7 +14,6 @@ public class ScientistController : MonoBehaviour
     public float deathAnimationLength = 0.5f;
     public float playerVelocityAbsorbtion = 0.2f;
     public float timerValue = 3f;
-    private bool dead;
 
     private float idleTimer = 0f;
     private float timeUntilWander = 0f;
@@ -50,7 +49,7 @@ public class ScientistController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(dead) return;
+        if(isDead) return;
         if(idleTimer > timeUntilWander)
         {
             // Walk to wander point
@@ -84,6 +83,12 @@ public class ScientistController : MonoBehaviour
             Vector2 velocity = playerRB.linearVelocity;
             rb.bodyType = RigidbodyType2D.Dynamic;
 
+            var collider = GetComponent<Collider2D>();
+            collider.isTrigger = false;
+
+            LayerMask groundMask = LayerMask.GetMask("Ground");
+            collider.includeLayers = groundMask;
+
             rb.linearVelocity = velocity * playerVelocityAbsorbtion;
 
             // Trigger death
@@ -94,7 +99,7 @@ public class ScientistController : MonoBehaviour
     private IEnumerator DeathRoutine()
     {
         animator.SetTrigger("Death");
-        dead = true;
+        isDead = true;
         TimerManager.Instance.AddToTimer(timerValue);
 
         // Wait until animations complete
@@ -108,10 +113,26 @@ public class ScientistController : MonoBehaviour
         deathParticles.Play();
         yield return null;
 
-        // prevent particles from getting destroyed with parent
-        deathParticles.transform.parent = null;
+        spriteRenderer.enabled = false;
+        rb.bodyType = RigidbodyType2D.Kinematic;
 
-        Destroy(gameObject);
+        // prevent particles from getting destroyed with parent
+        //deathParticles.transform.parent = null;
+
+        //Destroy(gameObject);
+    }
+
+    public override void ResetEnemy(Vector3 position)
+    {
+        spriteRenderer.enabled = true;
+        rb.bodyType = RigidbodyType2D.Kinematic;
+        rb.linearVelocity = Vector2.zero;
+        var collider = GetComponent<Collider2D>();
+        collider.isTrigger = true;
+        deathParticles.Stop();
+        //deathParticles.transform.parent = transform;
+        transform.position = position;
+        animator.SetTrigger("Reset");
     }
 
 

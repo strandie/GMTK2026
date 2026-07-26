@@ -94,6 +94,12 @@ public class TimerManager : MonoBehaviour
         timerText.transform.rotation = Quaternion.Euler(Vector3.forward * currRotation);
     }
 
+    public void ResetTimer()
+    {
+        timer = timerStartValue;
+        StopTimer = false;
+    }
+
     public void SetTimer(float val)
     {
         timer = val;

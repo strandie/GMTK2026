@@ -371,7 +371,8 @@ public class PlayerMovement : MonoBehaviour
 
         freezePlayer = false;
 
-        TimerManager.Instance.SetTimer(10f);
+        TimerManager.Instance.ResetTimer();
+        EnemyPlacementManager.Instance.ResetEnemies();
     }
 
     private void ApplyBetterGravity()
