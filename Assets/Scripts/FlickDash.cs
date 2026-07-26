@@ -504,6 +504,8 @@ public class FlickDash : MonoBehaviour
             IsDashing = true;
  
             dashTimer = 0;
+
+            AudioManager.Instance.PlayDashSFX(speed / maxVelocity);
  
             // Trigger timer cost
  

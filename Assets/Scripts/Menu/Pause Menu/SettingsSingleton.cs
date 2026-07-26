@@ -16,11 +16,19 @@ public class SettingsSingleton : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public float volume = 0.5f;
-    public float GetVolume() {return volume;}
-    public void SetVolume(float newVol)
+    private float musicVolume = 0.5f;
+    public float GetMusicVolume() {return musicVolume;}
+    public void SetMusicVolume(float newVol)
     {
-        volume = newVol;
+        musicVolume = newVol;
+        AudioManager.Instance.SetMusicVolume(musicVolume);
+    }
+    private float sfxVolume = 0.5f;
+    public float GetSFXVolume() {return sfxVolume;}
+    public void SetSFXVolume(float newVol)
+    {
+        sfxVolume = newVol;
+        AudioManager.Instance.SetSFXVolume(musicVolume);
     }
     private bool mouseHidden = false;
     public bool GetMouseHidden() {return mouseHidden;}
@@ -40,7 +48,8 @@ public class SettingsSingleton : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        SetMusicVolume(musicVolume);
+        SetSFXVolume(sfxVolume);
     }
 
     // Update is called once per frame
