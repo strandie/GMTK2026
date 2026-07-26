@@ -1707,6 +1707,10 @@ PrefabInstance:
       propertyPath: nextScene
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2703696479155684334, guid: 0de282b08a51e6f48b1ad1f4ee57c1a1, type: 3}
+      propertyPath: startCovered
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5326636969353711552, guid: 0de282b08a51e6f48b1ad1f4ee57c1a1, type: 3}
       propertyPath: m_Name
       value: TransitionScreen
@@ -2184,7 +2188,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 205553611577736989, guid: e9a4a9be3de7acf47aceb4d723e2b40f, type: 3}
       propertyPath: orthographic size
-      value: 6.71875
+      value: 5.90625
       objectReference: {fileID: 0}
     - target: {fileID: 1331875792795533772, guid: e9a4a9be3de7acf47aceb4d723e2b40f, type: 3}
       propertyPath: m_Name
