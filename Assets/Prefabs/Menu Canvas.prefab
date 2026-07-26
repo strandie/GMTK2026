@@ -127,11 +127,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
   pauseContent: {fileID: 1646058667920857878}
-  settingsContent: {fileID: 220686499859357484}
+  settingsMenu: {fileID: 220686499859357484}
   screenOverlay: {fileID: 1824573474659218826}
   menuTransitionDuration: 0.2
-  player: {fileID: 0}
-  timer: {fileID: 0}
 --- !u!1 &840449221859038388
 GameObject:
   m_ObjectHideFlags: 0

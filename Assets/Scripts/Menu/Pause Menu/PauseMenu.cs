@@ -5,15 +5,15 @@ using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour
 {
     public Transform pauseContent;
-    public Transform settingsContent;
+    public Transform settingsMenu;
     private System.Collections.Generic.List<Transform> items;
     public Image screenOverlay;
     private Color overlayColor;
     private Color transparent;
     public float menuTransitionDuration = 0.2f;
 
-    public PlayerMovement player;
-    public TimerManager timer;
+    //public PlayerMovement player;
+    //public TimerManager timer;
 
     private Coroutine activeRoutine;
 
@@ -33,11 +33,12 @@ public class PauseMenu : MonoBehaviour
         screenOverlay.color = transparent;
 
         pauseContent.gameObject.SetActive(false);
-        settingsContent.gameObject.SetActive(false);
+        settingsMenu.gameObject.SetActive(false);
     }
 
     private void SyncSettingsWithMenu()
     {
+        Transform settingsContent = settingsMenu.GetChild(0).GetChild(0);
         // Update volume
         settingsContent.GetChild(0).GetComponentInChildren<Slider>().value = SettingsSingleton.Instance.GetVolume();
         settingsContent.GetChild(1).GetComponentInChildren<Toggle>().isOn = SettingsSingleton.Instance.GetMouseHidden();
@@ -59,8 +60,8 @@ public class PauseMenu : MonoBehaviour
     private IEnumerator RevealPauseMenuRoutine()
     {
         pauseContent.gameObject.SetActive(true);
-        timer.StopTimer = true;
-        player.FreezePlayerState();
+        TimerManager.Instance.StopTimer = true;
+        PlayerMovement.Instance.FreezePlayerState();
 
         float time = 0f;
         while(time < menuTransitionDuration)
@@ -85,9 +86,9 @@ public class PauseMenu : MonoBehaviour
             time += Time.deltaTime;
             float t = time / menuTransitionDuration;
 
-            if(settingsContent.gameObject.activeSelf)
+            if(settingsMenu.gameObject.activeSelf)
             {
-                settingsContent.localScale = Vector3.one * (1f - Mathf.Min(t, 1f));
+                settingsMenu.localScale = Vector3.one * (1f - Mathf.Min(t, 1f));
             }
             else
             {
@@ -100,9 +101,9 @@ public class PauseMenu : MonoBehaviour
             yield return null;
         }
         pauseContent.gameObject.SetActive(false);
-        settingsContent.gameObject.SetActive(false);
-        timer.StopTimer = false;
-        player.UnfreezePlayerState();
+        settingsMenu.gameObject.SetActive(false);
+        TimerManager.Instance.StopTimer = false;
+        PlayerMovement.Instance.UnfreezePlayerState();
 
         activeRoutine = null;
     }
@@ -118,7 +119,6 @@ public class PauseMenu : MonoBehaviour
     }
     private IEnumerator OpenSettingsMenuRoutine()
     {
-        Debug.Log("Opened settings mennu");
         // Hide pause buttons
         float time = 0f;
         while(time < menuTransitionDuration * 0.5f)
@@ -134,14 +134,14 @@ public class PauseMenu : MonoBehaviour
         pauseContent.gameObject.SetActive(false);
 
         // Show settings
-        settingsContent.gameObject.SetActive(true);
-        settingsContent.localScale = Vector3.zero;
+        settingsMenu.gameObject.SetActive(true);
+        settingsMenu.localScale = Vector3.zero;
         time = 0f;
         while(time < menuTransitionDuration * 0.5f)
         {
             time += Time.deltaTime;
             float t = time / (menuTransitionDuration * 0.5f);
-            settingsContent.localScale = Vector3.one * Mathf.Min(t, 1f);
+            settingsMenu.localScale = Vector3.one * Mathf.Min(t, 1f);
             yield return null;
         }
     }
@@ -153,10 +153,10 @@ public class PauseMenu : MonoBehaviour
         {
             time += Time.deltaTime;
             float t = time / (menuTransitionDuration * 0.5f);
-            settingsContent.localScale = Vector3.one * (1f - Mathf.Min(t, 1f));
+            settingsMenu.localScale = Vector3.one * (1f - Mathf.Min(t, 1f));
             yield return null;
         }
-        settingsContent.gameObject.SetActive(false);
+        settingsMenu.gameObject.SetActive(false);
 
         // Show pause buttons
         time = 0f;
@@ -181,5 +181,14 @@ public class PauseMenu : MonoBehaviour
             if(MenuActive) HideMenu();
             else RevealMenu();
         }
+    }
+
+    public void RestartLevel()
+    {
+        PlayerMovement.Instance.BeginDeath();
+    }
+    public void SkipLevel()
+    {
+        LevelExit.Instance.SkipLevel();
     }
 }

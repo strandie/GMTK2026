@@ -16,9 +16,6 @@ public class SettingsSingleton : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public PlayerMovement player;
-    public FlickDash dashSettings;
-
     public float volume = 0.5f;
     public float GetVolume() {return volume;}
     public void SetVolume(float newVol)
@@ -30,14 +27,14 @@ public class SettingsSingleton : MonoBehaviour
     public void SetMouseHidden(bool val)
     {
         mouseHidden = val;
-        dashSettings.mouseHidden = val;
+        PlayerMovement.Instance.GetComponent<FlickDash>().mouseHidden = val;
     }
     private bool clicklessDash = false;
     public bool GetClicklessDashEnabled() {return clicklessDash;}
     public void SetClicklessDash(bool val)
     {
         clicklessDash = val;
-        dashSettings.motionTriggeredMode = val;
+        PlayerMovement.Instance.GetComponent<FlickDash>().motionTriggeredMode = val;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

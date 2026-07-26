@@ -4,10 +4,16 @@ using System.Collections;
 
 public class LevelExit : MonoBehaviour
 {
+    public static LevelExit Instance;
     public string nextSceneName;
     public float shrinkTime = 1.5f;
 
     bool activated = false;
+
+    public void Awake()
+    {
+        Instance = this;
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
