@@ -92,8 +92,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6f201c46118e7d4298cda318019257c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelExit
-  nextSceneName: 
-  shrinkTime: 1.5
+  nextSceneName: Level2TestScene
+  shrinkTime: 0.7
 --- !u!212 &8274670691744008853
 SpriteRenderer:
   serializedVersion: 3
@@ -143,7 +143,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 73a3dd06b2c32ad488813c13c8010fc0, type: 3}
+  m_Sprite: {fileID: -1976622764, guid: f41a0403d71dfed4fbdcc9595b150426, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
