@@ -20,6 +20,19 @@ public class LevelExit : MonoBehaviour
         }
     }
 
+    public void SkipLevel()
+    {
+        Debug.Log("Loading next scene: " + nextSceneName);
+
+        // Start screen wipe
+        ScreenWipe wipe = FindAnyObjectByType<ScreenWipe>();
+
+        if (wipe != null)
+        {
+            wipe.Close();
+        }
+    }
+
     IEnumerator EnterPortal(GameObject player)
     {
         // Stop player movement

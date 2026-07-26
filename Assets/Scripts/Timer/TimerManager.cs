@@ -15,8 +15,6 @@ public class TimerManager : MonoBehaviour
         }
 
         Instance = this;
-
-        DontDestroyOnLoad(gameObject);
     }
 
     public TextMeshProUGUI timerText;

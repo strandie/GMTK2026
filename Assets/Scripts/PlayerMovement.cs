@@ -76,14 +76,27 @@ public class PlayerMovement : MonoBehaviour
     public ParticleSystem DeathParticles;
     private bool freezePlayer;
     private Vector2 storedVelOnFreeze;
-    public void FreezePlayer()
+    public void FreezePlayerState()
     {
+        StartCoroutine(FreezePlayerStateRoutine());
+    }
+    private IEnumerator FreezePlayerStateRoutine()
+    {
+        bool playerIsDying = false;
+        if(deathRoutine != null)
+        {
+            yield return deathRoutine;
+            playerIsDying = true;
+        }
+        if(playerIsDying) TimerManager.Instance.StopTimer = true;
+
         freezePlayer = true;
         storedVelOnFreeze = rb.linearVelocity;
         rb.linearVelocity = Vector2.zero;
         rb.bodyType = RigidbodyType2D.Kinematic;
+        Cursor.lockState = CursorLockMode.None;
     }
-    public void UnfreezePlayer() 
+    public void UnfreezePlayerState() 
     {
         freezePlayer = false;
         rb.linearVelocity = storedVelOnFreeze;
@@ -114,6 +127,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if(freezePlayer)
+        {
+            return;
+        }
         coyoteTimer -= Time.deltaTime;
         jumpBufferTimer -= Time.deltaTime;
         wallJumpControlLockTimer -= Time.deltaTime;
@@ -128,11 +145,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (Input.GetKey(KeyCode.Escape))
-            Cursor.lockState = CursorLockMode.None;
         
-        if (Input.GetMouseButtonDown(0))
-            Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void OnMovement(InputAction.CallbackContext context)
@@ -320,6 +333,7 @@ public class PlayerMovement : MonoBehaviour
         return wallSide;
     }
 
+    private Coroutine deathRoutine = null;
     public void BeginDeath()
     {
         animator.SetBool("IsDead", true);
@@ -328,7 +342,7 @@ public class PlayerMovement : MonoBehaviour
         freezePlayer = true;
         rb.bodyType = RigidbodyType2D.Kinematic;
         //rb.linearDamping = deathLinearDamping;
-        StartCoroutine(DeathRoutine());
+        deathRoutine = StartCoroutine(DeathRoutine());
     }
     private IEnumerator DeathRoutine()
     {
@@ -349,6 +363,7 @@ public class PlayerMovement : MonoBehaviour
         yield return null;
 
         ResetPlayer(spawnLocation.position);
+        deathRoutine = null;
     }
 
     public void ResetPlayer(Vector3 position)
