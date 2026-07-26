@@ -25,7 +25,7 @@ public class ScreenWipe : MonoBehaviour
         float screenWidth = screenHeight * cam.aspect;
 
         // Put rectangle just outside the screen
-        float offset = screenWidth + 5f;
+        float offset = screenWidth + 50f;
 
         leftPosition = new Vector3(-offset, 0, -5);
         rightPosition = new Vector3(offset, 0, -5);
