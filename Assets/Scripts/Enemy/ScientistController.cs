@@ -18,6 +18,7 @@ public class ScientistController : AbstractEnemyController
     private float idleTimer = 0f;
     private float timeUntilWander = 0f;
     private Vector2 wanderDestination;
+    public Vector2 wanderOffset = Vector2.zero;
 
     [Header("SFX")]
     public AudioClip hit1SFX;
@@ -43,11 +44,11 @@ public class ScientistController : AbstractEnemyController
 
     Vector2 GenerateWanderTarget()
     {
-        Vector2 candidate = origin + Random.Range(-wanderRadius, wanderRadius) * Vector2.right;
+        Vector2 candidate = origin + wanderOffset + Random.Range(-wanderRadius, wanderRadius) * Vector2.right;
         Vector2 currPos = transform.position;
         while(Vector2.Distance(candidate, currPos) < minWalkDistance)
         {
-            candidate = origin + Random.Range(-wanderRadius, wanderRadius) * Vector2.right;
+            candidate = origin + wanderOffset + Random.Range(-wanderRadius, wanderRadius) * Vector2.right;
         }
         return candidate;
     }
@@ -156,6 +157,6 @@ public class ScientistController : AbstractEnemyController
 
     void OnDrawGizmosSelected()
     {
-        Gizmos.DrawWireSphere(transform.position, wanderRadius);
+        Gizmos.DrawWireSphere(transform.position + new Vector3(wanderOffset.x, wanderOffset.y, 0f), wanderRadius);
     }
 }
