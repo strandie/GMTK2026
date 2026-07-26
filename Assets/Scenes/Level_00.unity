@@ -5036,6 +5036,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 963762761}
     m_Modifications:
+    - target: {fileID: 1455573813496478101, guid: 4de41fb656888fc45bf680ca7352fa07, type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455573813496478101, guid: 4de41fb656888fc45bf680ca7352fa07, type: 3}
+      propertyPath: CollisionModule.multiplyColliderForceByParticleSize
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4684612913635383667, guid: 4de41fb656888fc45bf680ca7352fa07, type: 3}
       propertyPath: m_Name
       value: Scientist
