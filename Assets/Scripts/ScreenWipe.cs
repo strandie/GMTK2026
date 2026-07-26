@@ -9,28 +9,44 @@ public class ScreenWipe : MonoBehaviour
 
     public bool startCovered = false;
 
-    Vector3 coveredPosition;
-    Vector3 leftPosition;
-    Vector3 rightPosition;
+    private Vector3 coveredPosition;
+    private Vector3 leftPosition;
+    private Vector3 rightPosition;
+
+    public Camera cam;
 
     void Start()
     {
-        coveredPosition = Vector3.zero;
 
-        leftPosition = new Vector3(-50, 0, -5);
-        rightPosition = new Vector3(50, 0, -5);
+        coveredPosition = new Vector3(0, 0, -5);
 
+        // Get camera size
+        float screenHeight = cam.orthographicSize * 2f;
+        float screenWidth = screenHeight * cam.aspect;
+
+        // Put rectangle just outside the screen
+        float offset = screenWidth + 5f;
+
+        leftPosition = new Vector3(-offset, 0, -5);
+        rightPosition = new Vector3(offset, 0, -5);
+
+        // Make rectangle cover the whole screen
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+
+        if (sr != null)
+        {
+            transform.localScale = new Vector3(50f, 50f, 1f);
+        }
 
         if (startCovered)
         {
-            // Already covering the screen
+            // Start covering the screen, then reveal
             transform.position = coveredPosition;
-
             StartCoroutine(Open());
         }
         else
         {
-            // Waiting to close
+            // Start off-screen, waiting for portal
             transform.position = leftPosition;
         }
     }
@@ -42,7 +58,7 @@ public class ScreenWipe : MonoBehaviour
 
     IEnumerator CloseAndLoad()
     {
-        while (Vector3.Distance(transform.position, coveredPosition) > 0.1f)
+        while (Vector3.Distance(transform.position, coveredPosition) > 0.05f)
         {
             transform.position = Vector3.MoveTowards(
                 transform.position,
@@ -52,14 +68,12 @@ public class ScreenWipe : MonoBehaviour
 
             yield return null;
         }
-
-
         SceneManager.LoadScene(nextScene);
     }
 
     IEnumerator Open()
     {
-        while (Vector3.Distance(transform.position, rightPosition) > 0.1f)
+        while (Vector3.Distance(transform.position, rightPosition) > 0.05f)
         {
             transform.position = Vector3.MoveTowards(
                 transform.position,
