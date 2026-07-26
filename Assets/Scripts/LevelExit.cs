@@ -57,6 +57,13 @@ public class LevelExit : MonoBehaviour
         }
 
         Debug.Log("Loading next scene: " + nextSceneName);
-        SceneManager.LoadScene(nextSceneName);
+
+        // Start screen wipe
+        ScreenWipe wipe = FindAnyObjectByType<ScreenWipe>();
+
+        if (wipe != null)
+        {
+            wipe.Close();
+        }
     }
 }
