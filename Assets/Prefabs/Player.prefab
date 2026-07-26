@@ -15438,8 +15438,8 @@ MonoBehaviour:
   dashDuration: 0.25
   velocityMultiplier: 0.6
   maxVelocity: 30
-  dashCostScale: 0.3
-  flatDashCost: 0.25
+  dashCostScale: 3
+  flatDashCost: 2
   mouseSensitivity: 0.2
   maxFlickDistance: 180
   minimumFlickDistance: 0.2
