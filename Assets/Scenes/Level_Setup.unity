@@ -279,10 +279,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 524de3754ce44464a8fc3429be36b940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScreenWipe
-  speed: 100
-  nextScene: Level_44
+  speed: 300
+  nextScene: Level_Setup
   startCovered: 1
-  cam: {fileID: 0}
+  cam: {fileID: 570836451}
 --- !u!1 &374365805 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1331875792795533772, guid: e9a4a9be3de7acf47aceb4d723e2b40f, type: 3}
